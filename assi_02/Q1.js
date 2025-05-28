@@ -17,6 +17,7 @@ let grade = percentage >= 80 ? "A" :
         percentage >= 60 ? "C" :
         percentage >= 50 ? "D" : "F";
 
+        
  document.write(`
             <h1>Student Mark Sheet</h1>
             <table border="1">
