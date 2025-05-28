@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Brand and Model Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mobile Brand and Model Filter</h2>
+    <div>
+        <label for="brandSelect">Select Brand:</label>
+        <select id="brandSelect" onchange="updateModels()">
+            <option value="">Select a brand</option>
+        </select>
+    </div>
+    <div>
+        <label for="modelSelect">Select Model:</label>
+        <select id="modelSelect" disabled>
+            <option value="">Select a model</option>
+        </select>
+    </div>
+    <div>
+        <button id="searchBtn" onclick="displayDetails()" disabled>Search</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="mobiles.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', populateBrands);
+    </script>
+</body>
+</html>
