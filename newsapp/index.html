@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #333; /* Dark grey background */
+            color: white; /* Set default text color to white */
+        }
+        .navbar {
+            background-color: black; /* Black navbar */
+        }
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: white; /* White text for navbar items */
+        }
+        .navbar .nav-link:hover {
+            color: lightgrey; /* Light grey on hover for navbar items */
+        }
+        .search-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+        .form-control {
+            background-color: grey; /* Grey background for search box */
+            color: lightgrey; /* Light grey text for search box */
+        }
+        .form-control::placeholder {
+            color: lightgrey; /* Light grey placeholder text */
+        }
+        .card {
+            margin: 15px; /* Add spacing between cards */
+            transition: transform 0.2s; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to cards */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+        .loader {
+            display: none; /* Hide loader by default */
+            position: fixed; /* Position it fixed */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the loader */
+            z-index: 1000; /* Ensure it is above other content */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="search-container">
+                    <input class="form-control me-2" id="inputData" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" onclick="getNews()" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="loader">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div id="showData" class="d-flex flex-wrap justify-content-start"></div>
+
+    <!-- Include your JavaScript file here -->
+    <script src="app.js"></script>
+</body>
+</html>
