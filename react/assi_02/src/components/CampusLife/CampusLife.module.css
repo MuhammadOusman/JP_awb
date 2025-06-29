@@ -1,12 +1,98 @@
-.campusLife { background-color: #fff; } .row { display: flex; flex-wrap: wrap; align-items: center; }
-.accordionCol { flex: 0 0 58.33%; max-width: 58.33%; padding: 0 15px; }
-.imageCol { flex: 0 0 41.67%; max-width: 41.67%; padding: 0 15px; }
-.aboutImage { position: relative; text-align: center; margin-left: 30px; }
-.aboutImage img { width: 100%; height: auto; border-radius: 8px; }
-.shape1 { position: absolute; bottom: 0; right: 0; width: 100px; height: auto; transform: translate(30%, 30%); z-index: 2; }
-.aboutContent ul { padding: 0; } .bottomLink { text-align: center; margin-top: 50px; }
+/* src/components/CampusLife/CampusLife.module.css */
+.campusLife {
+    background-color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically align content */
+    margin-top: 50px; /* Add some space below the section title */
+}
+
+.accordionCol {
+    flex: 0 0 58.33%; /* Equivalent to col-lg-7 */
+    max-width: 58.33%;
+    padding: 0 15px; /* Column padding */
+}
+
+.imageCol {
+    flex: 0 0 41.67%; /* Equivalent to col-lg-5 */
+    max-width: 41.67%;
+    padding: 0 15px; /* Column padding */
+    position: relative; /* For positioning shape inside this column */
+}
+
+.aboutImage {
+    position: relative;
+    text-align: center;
+    /* Adjust margin/padding to prevent image from being too close to accordion */
+    margin-left: 30px; /* Space from accordion on desktop */
+    padding: 20px; /* Add padding around the image for the green circle to appear */
+    display: flex; /* To center the image inside this padded area */
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow for the image card */
+    position: relative; /* Ensure image is above pseudo-elements */
+    z-index: 1;
+}
+
+/* Green circle shape (using pseudo-element on the image container) */
+.aboutImage::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Adjust based on desired overlap */
+    right: -15px; /* Adjust based on desired overlap */
+    width: 150px; /* Size of the green circle */
+    height: 150px;
+    border: 5px solid #55B494; /* Green border color */
+    border-radius: 50%;
+    z-index: 0; /* Behind the image */
+    transform: translate(20%, 20%); /* Fine-tune position relative to its .aboutImage parent */
+}
+
+/* Note: The 'shape1' img you imported previously might not be needed if using pseudo-elements */
+/* If `shapeImg` is the green circle, remove the `::after` and style `.shape1` instead */
+/* For example:
+.shape1 {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    transform: translate(20%, 20%);
+}
+*/
+
+.aboutContent ul {
+    padding: 0;
+}
+
+.bottomLink {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 992px) {
-    .accordionCol, .imageCol { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
-    .aboutImage { margin-left: 0; margin-top: 50px; }
-    .shape1 { position: static; transform: none; margin: 20px auto 0; }
+    .accordionCol, .imageCol {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .aboutImage {
+        margin-left: 0;
+        margin-top: 50px; /* Space between accordion and image */
+        padding: 10px; /* Reduced padding on mobile */
+    }
+    .aboutImage::after {
+        display: none; /* Hide complex shapes on mobile for simplicity */
+    }
 }

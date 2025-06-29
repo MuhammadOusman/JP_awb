@@ -1,7 +1,10 @@
+
 import React from 'react';
 import styles from './WelcomeLMS.module.css';
-import aboutImg from '../../assets/images/about.png';
-import badgeImg from '../../assets/images/badge.png';
+import aboutImgMain from '../../assets/images/about.png'; 
+import badgeImg from '../../assets/images/badge.png'; 
+
+
 import { FaArrowRight, FaEnvelope } from 'react-icons/fa';
 
 const WelcomeLMS = () => {
@@ -11,8 +14,16 @@ const WelcomeLMS = () => {
         <div className={styles.row}>
           <div className={styles.imageCol}>
             <div className={styles.aboutImage}>
-              <img src={aboutImg} alt="About Echooling" />
-              <img className={styles.reactShapeAb} src={badgeImg} alt="Shape Image" />
+              {/* Main image */}
+              <img src={aboutImgMain} alt="About Echooling" className={styles.mainAboutImage} />
+              
+              {/* College Badge, positioned absolutely */}
+              <img className={styles.collegeBadge} src={badgeImg} alt="College Badge" />
+
+              {/* These divs will be styled with pseudo-elements or background images in CSS for dots/shapes */}
+              <div className={styles.shapeDots1}></div> {/* Top left dots */}
+              <div className={styles.shapeDots2}></div> {/* Bottom right dots */}
+              <div className={styles.shapeCircle}></div> {/* Bottom right circle */}
             </div>
           </div>
           <div className={styles.contentCol}>
@@ -22,8 +33,15 @@ const WelcomeLMS = () => {
               <p className={styles.aboutParagraph2}>Have questions? <a href="/"> Get Free Guide </a></p>
               <p className={styles.paragraphBottom}>Education also refers to the knowledge received through schooling instruction <br />and to the institution of teaching as a whole. The main purpose of education <br />is the integral development of a person.</p>
               <ul className={styles.actionList}>
-                <li><a className={`arrow-link ${styles.readMoreBtn}`} href="/about">Read More <FaArrowRight /></a></li>
-                <li className={styles.lastLi}><em>Get Support</em><a href="mailto:support@react.com"><FaEnvelope className={styles.mailIcon} /> support@react.com</a></li>
+                <li>
+                  <a className={`arrow-link ${styles.readMoreBtn}`} href="/about">
+                    Read More <FaArrowRight />
+                  </a>
+                </li>
+                <li className={styles.lastLi}>
+                  <em>Get Support</em>
+                  <a href="mailto:support@react.com"><FaEnvelope className={styles.mailIcon} /> support@react.com</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -32,4 +50,5 @@ const WelcomeLMS = () => {
     </section>
   );
 };
+
 export default WelcomeLMS;

@@ -1,28 +1,227 @@
-
-.welcomeLMS { background-color: #fff; }
-.row { display: flex; flex-wrap: wrap; align-items: center; }
-.imageCol { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
-.aboutImage { position: relative; text-align: center; }
-.aboutImage img { width: 100%; height: auto; border-radius: 8px; }
-.reactShapeAb { position: absolute; top: 0; left: 0; width: 150px; height: auto; transform: translate(-20%, -20%); z-index: 2; }
-.contentCol { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
-.aboutContent { padding-left: 30px; }
-.aboutTitle { font-family: 'Montserrat', sans-serif; font-size: 2.5em; font-weight: 700; color: #002B4B; line-height: 1.2; margin-bottom: 20px; }
-.aboutTitle em { color: #55B494; font-style: normal; }
-.aboutParagraph, .paragraphBottom { font-size: 1em; line-height: 1.7; margin-bottom: 15px; color: #555; }
-.aboutParagraph2 { font-size: 1.1em; margin-bottom: 20px; font-weight: 500; }
-.aboutParagraph2 a { color: #E24C4B; font-weight: 600; transition: color 0.3s ease; }
-.aboutParagraph2 a:hover { color: #c93b3b; }
-.actionList { display: flex; align-items: center; gap: 30px; margin-top: 30px; }
-.readMoreBtn { font-size: 1.1em; font-weight: 600; }
-.lastLi { display: flex; align-items: center; gap: 10px; font-size: 1.1em; color: #002B4B; font-weight: 600; }
-.lastLi em { font-style: normal; } .lastLi a { color: #E24C4B; transition: color 0.3s ease; }
-.lastLi a:hover { color: #c93b3b; } .mailIcon { margin-right: 5px; color: #55B494; }
-@media (max-width: 992px) {
-    .imageCol, .contentCol { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
-    .aboutContent { padding-left: 0; margin-top: 50px; text-align: center; }
-    .actionList { justify-content: center; flex-wrap: wrap; gap: 20px; }
-    .reactShapeAb { position: static; transform: none; margin: 20px auto 0; }
+.welcomeLMS {
+    background-color: #fff;
 }
-@media (max-width: 768px) { .aboutTitle { font-size: 2em; } }
-@media (max-width: 576px) { .aboutTitle { font-size: 1.8em; } .aboutParagraph, .paragraphBottom { font-size: 0.9em; } .aboutParagraph2, .lastLi { font-size: 1em; } .actionList { flex-direction: column; gap: 15px; } }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imageCol {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    position: relative;
+}
+
+.aboutImage {
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainAboutImage {
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.collegeBadge {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 180px;
+    height: auto;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+
+.shapeDots1, .shapeDots2, .shapeCircle {
+    position: absolute;
+    z-index: 0;
+}
+
+.shapeDots1 {
+    top: 15%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-image: radial-gradient(circle, #55B494 2px, transparent 2px);
+    background-size: 10px 10px;
+}
+
+.shapeDots2 {
+    bottom: 5%;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: radial-gradient(circle, #E24C4B 2px, transparent 2px);
+    background-size: 10px 10px;
+}
+
+.shapeCircle {
+    bottom: 0;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #002B4B;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    opacity: 0.7;
+}
+
+.contentCol {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+}
+
+.aboutContent {
+    padding-left: 30px;
+}
+
+.aboutTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #002B4B;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.aboutTitle em {
+    color: #55B494;
+    font-style: normal;
+}
+
+.aboutParagraph,
+.paragraphBottom {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.aboutParagraph2 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.aboutParagraph2 a {
+    color: #E24C4B;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.aboutParagraph2 a:hover {
+    color: #c93b3b;
+}
+
+.actionList {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.readMoreBtn {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.lastLi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+    color: #002B4B;
+    font-weight: 600;
+}
+
+.lastLi em {
+    font-style: normal;
+}
+
+.lastLi a {
+    color: #E24C4B;
+    transition: color 0.3s ease;
+}
+
+.lastLi a:hover {
+    color: #c93b3b;
+}
+
+.mailIcon {
+    margin-right: 5px;
+    color: #55B494;
+}
+
+@media (max-width: 992px) {
+    .imageCol, .contentCol {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .aboutImage {
+        height: auto;
+        padding: 0;
+        margin-top: 30px;
+    }
+    .mainAboutImage {
+        width: 100%;
+    }
+    .collegeBadge {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+    }
+    .shapeDots1, .shapeDots2, .shapeCircle {
+        display: none;
+    }
+    .aboutContent {
+        padding-left: 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .actionList {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutTitle {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutTitle {
+        font-size: 1.8em;
+    }
+    .aboutParagraph, .paragraphBottom {
+        font-size: 0.9em;
+    }
+    .aboutParagraph2, .lastLi {
+        font-size: 1em;
+    }
+    .actionList {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
