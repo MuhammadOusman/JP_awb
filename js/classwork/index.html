@@ -1,11 +1,1778 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://echooling-react.vercel.app/?storefront=envato-elements"/fav.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+    <title>Echooling - Online Education React Template</title>
+    <script defer="defer" src="/static/js/main.54722437.js"></script>
+    <link href="/static/css/main.163115e4.css" rel="stylesheet">
+    <style type="text/css" id="operaUserStyle"></style>
+    <style type="text/css"></style>
 </head>
-<body>
-   <script src="app.js"></script>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="App">
+            <header id="react-header" class="react-header react-header-three">
+                <div class="header-area">
+                    <div class="topbar-area style1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="topbar-contact">
+                                        <ul>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-phone">
+                                                    <path
+                                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                    </path>
+                                                </svg><a href="tel:(+1)3344999999"> (+1) 3344 999 999</a></li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-mail">
+                                                    <path
+                                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                    </path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg><a href="mailto:info@reactheme.com">info@reactheme.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 text-right">
+                                    <div class="toolbar-sl-share">
+                                        <ul class="social-links">
+                                            <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a>
+                                            </li>
+                                            <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a>
+                                            </li>
+                                            <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-part">
+                        <div class="container">
+                            <div class="react-main-menu">
+                                <nav>
+                                    <div class="menu-toggle">
+                                        <div class="logo"><a class="logo-text" href="/"><img
+                                                    src="data:image/png;base64,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"
+                                                    alt=""></a></div><button type="button" id="menu-btn"
+                                            class="mobile-menu-btn"><span class="icon-bar"></span><span
+                                                class="icon-bar"></span><span class="icon-bar"></span></button>
+                                    </div>
+                                    <div class="react-inner-menus">
+                                        <ul id="backmenu" class="react-menus react-sub-shadow">
+                                            <li class="has-sub menu-active"><a class="hash" href="/">Home<span
+                                                        class="arrow "></span></a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-active"><a href="/">Home One</a></li>
+                                                    <li class=""><a href="/home-2">Home Two</a></li>
+                                                    <li class=""><a href="/home-3">Home Three</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><a class="hash" href="/">Pages<span
+                                                        class="arrow "></span></a>
+                                                <ul class="sub-menu">
+                                                    <li class=""><a href="/about">About</a></li>
+                                                    <li class=""><a href="/instructor">Instructor</a></li>
+                                                    <li class=""><a href="/instructor/1">Profile</a></li>
+                                                    <li class=""><a href="/login">Login</a></li>
+                                                    <li class=""><a href="/signup">Signup</a></li>
+                                                    <li class="has-sub"><a class="hash" href="/">Events</a>
+                                                        <ul class="sub-menu">
+                                                            <li class=""><a href="/event">Events</a></li>
+                                                            <li class=""><a href="/event-sidebar">Events Sidebar</a>
+                                                            </li>
+                                                            <li class=""><a href="/event/1">Event Single</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><span class="arrow "></span><a class="hash"
+                                                    href="/">Courses<span class="arrow "></span></a>
+                                                <ul class="sub-menu">
+                                                    <li class=""><a href="/course">Course</a></li>
+                                                    <li class=""><a href="/course-sidebar">Right Sidebar</a></li>
+                                                    <li class=""><a href="/course-list">Courses List</a></li>
+                                                    <li class=""><a href="/course/1">Course Single</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><a class="hash" href="/">Blog<span
+                                                        class="arrow "></span></a>
+                                                <ul class="sub-menu">
+                                                    <li class=""><a href="/blog">Blog</a></li>
+                                                    <li class=""><a href="/blog/1">Blog Single</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=""><a href="/contact">Contact</a></li>
+                                        </ul>
+                                        <div class="searchbar-part">
+                                            <form class="search-form"><input type="text" class="form-input"
+                                                    placeholder="Search Course"><a class="form-button"
+                                                    href="/course"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-search">
+                                                        <circle cx="11" cy="11" r="8"></circle>
+                                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                    </svg></a></form>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="react-wrapper">
+                <div class="react-wrapper-inner">
+                    <div class="react-slider-part">
+                        <div class="home-sliders home2">
+                            <div class="slick-slider slick-initialized" dir="ltr"><button type="button" data-role="none"
+                                    class="slick-arrow slick-prev" style="display: block;"> Previous</button>
+                                <div class="slick-list">
+                                    <div class="slick-track"
+                                        style="width: 4975px; opacity: 1; transform: translate3d(-995px, 0px, 0px);">
+                                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
+                                            aria-hidden="true" style="width: 995px;">
+                                            <div>
+                                                <div class="single-slide" tabindex="-1"
+                                                    style="width: 100%; display: inline-block;">
+                                                    <div class="slider-img"><img class="desktop"
+                                                            src="/static/media/2.924b429a0601a89b04e1.jpg"
+                                                            alt="Slider Image 1"><img class="mobile"
+                                                            src="/static/media/12.c47dc7dc5a1de48de9df.jpg"
+                                                            alt="Slider Image 1"></div>
+                                                    <div class="container">
+                                                        <div class="slider-content">
+                                                            <div class="content-part"><span
+                                                                    class="slider-pretitle wow animate__fadeInUp"
+                                                                    data-wow-duration="3s">Great Quality Cocial
+                                                                    life</span>
+                                                                <h2 class="slider-title wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Discover the world of<br>
+                                                                    possible university.</h2>
+                                                                <div class="slider-btn wow animate__fadeInUp"
+                                                                    data-wow-duration="1.2s"><a class="react-btn-border"
+                                                                        href="/about">Admissions</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event__video-btn--play wow animate__fadeInUp"
+                                                            data-wow-duration="1.4s"><a
+                                                                class="event__video-btn--play-btn custom-popup"
+                                                                href="/"><i class="arrow_triangle-right"></i><em>Watch
+                                                                    Video <br>Intro</em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
+                                            aria-hidden="false" style="outline: none; width: 995px;">
+                                            <div>
+                                                <div class="single-slide" tabindex="-1"
+                                                    style="width: 100%; display: inline-block;">
+                                                    <div class="slider-img"><img class="desktop"
+                                                            src="/static/media/1.ddb463a076b58bbe0ea3.jpg"><img
+                                                            class="mobile"
+                                                            src="/static/media/11.c2bafb3a7df5adf6f832.jpg"
+                                                            alt="Slider Image 1"></div>
+                                                    <div class="container">
+                                                        <div class="slider-content">
+                                                            <div class="content-part"><span
+                                                                    class="slider-pretitle wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Great Quality Cocial
+                                                                    life</span>
+                                                                <h2 class="slider-title wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Discover the world
+                                                                    of<br>possible university.</h2>
+                                                                <div class="slider-btn wow animate__fadeInUp"
+                                                                    data-wow-duration="1.2s"><a class="react-btn-border"
+                                                                        href="/about">Admissions</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event__video-btn--play wow animate__fadeInUp"
+                                                            data-wow-duration="1.4s"><a
+                                                                class="event__video-btn--play-btn custom-popup"
+                                                                href="/"><i class="arrow_triangle-right"></i><em>Watch
+                                                                    Video <br>Intro</em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                            style="outline: none; width: 995px;">
+                                            <div>
+                                                <div class="single-slide" tabindex="-1"
+                                                    style="width: 100%; display: inline-block;">
+                                                    <div class="slider-img"><img class="desktop"
+                                                            src="/static/media/2.924b429a0601a89b04e1.jpg"
+                                                            alt="Slider Image 1"><img class="mobile"
+                                                            src="/static/media/12.c47dc7dc5a1de48de9df.jpg"
+                                                            alt="Slider Image 1"></div>
+                                                    <div class="container">
+                                                        <div class="slider-content">
+                                                            <div class="content-part"><span
+                                                                    class="slider-pretitle wow animate__fadeInUp"
+                                                                    data-wow-duration="3s">Great Quality Cocial
+                                                                    life</span>
+                                                                <h2 class="slider-title wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Discover the world of<br>
+                                                                    possible university.</h2>
+                                                                <div class="slider-btn wow animate__fadeInUp"
+                                                                    data-wow-duration="1.2s"><a class="react-btn-border"
+                                                                        href="/about">Admissions</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event__video-btn--play wow animate__fadeInUp"
+                                                            data-wow-duration="1.4s"><a
+                                                                class="event__video-btn--play-btn custom-popup"
+                                                                href="/"><i class="arrow_triangle-right"></i><em>Watch
+                                                                    Video <br>Intro</em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-index="2" tabindex="-1" class="slick-slide slick-cloned"
+                                            aria-hidden="true" style="width: 995px;">
+                                            <div>
+                                                <div class="single-slide" tabindex="-1"
+                                                    style="width: 100%; display: inline-block;">
+                                                    <div class="slider-img"><img class="desktop"
+                                                            src="/static/media/1.ddb463a076b58bbe0ea3.jpg"><img
+                                                            class="mobile"
+                                                            src="/static/media/11.c2bafb3a7df5adf6f832.jpg"
+                                                            alt="Slider Image 1"></div>
+                                                    <div class="container">
+                                                        <div class="slider-content">
+                                                            <div class="content-part"><span
+                                                                    class="slider-pretitle wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Great Quality Cocial
+                                                                    life</span>
+                                                                <h2 class="slider-title wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Discover the world
+                                                                    of<br>possible university.</h2>
+                                                                <div class="slider-btn wow animate__fadeInUp"
+                                                                    data-wow-duration="1.2s"><a class="react-btn-border"
+                                                                        href="/about">Admissions</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event__video-btn--play wow animate__fadeInUp"
+                                                            data-wow-duration="1.4s"><a
+                                                                class="event__video-btn--play-btn custom-popup"
+                                                                href="/"><i class="arrow_triangle-right"></i><em>Watch
+                                                                    Video <br>Intro</em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-index="3" tabindex="-1" class="slick-slide slick-cloned"
+                                            aria-hidden="true" style="width: 995px;">
+                                            <div>
+                                                <div class="single-slide" tabindex="-1"
+                                                    style="width: 100%; display: inline-block;">
+                                                    <div class="slider-img"><img class="desktop"
+                                                            src="/static/media/2.924b429a0601a89b04e1.jpg"
+                                                            alt="Slider Image 1"><img class="mobile"
+                                                            src="/static/media/12.c47dc7dc5a1de48de9df.jpg"
+                                                            alt="Slider Image 1"></div>
+                                                    <div class="container">
+                                                        <div class="slider-content">
+                                                            <div class="content-part"><span
+                                                                    class="slider-pretitle wow animate__fadeInUp"
+                                                                    data-wow-duration="3s">Great Quality Cocial
+                                                                    life</span>
+                                                                <h2 class="slider-title wow animate__fadeInUp"
+                                                                    data-wow-duration="1s">Discover the world of<br>
+                                                                    possible university.</h2>
+                                                                <div class="slider-btn wow animate__fadeInUp"
+                                                                    data-wow-duration="1.2s"><a class="react-btn-border"
+                                                                        href="/about">Admissions</a></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event__video-btn--play wow animate__fadeInUp"
+                                                            data-wow-duration="1.4s"><a
+                                                                class="event__video-btn--play-btn custom-popup"
+                                                                href="/"><i class="arrow_triangle-right"></i><em>Watch
+                                                                    Video <br>Intro</em></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><button type="button" data-role="none" class="slick-arrow slick-next"
+                                    style="display: block;"> Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="react_popular_topics pt---100 pb---70">
+                        <div class="container">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">Academics</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 wow animate__fadeInUp" data-wow-duration="0.3s">
+                                    <div class="item__inner">
+                                        <div class="item__inner">
+                                            <div class="icon"><img src="/static/media/1.045ce5893b04f4bde993.png"
+                                                    alt="image"></div>
+                                            <div class="react-content">
+                                                <h3 class="react-title"><a href="/course">Let’s Talk Science</a></h3><a
+                                                    class="r__link" href="/course">Learn More <svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 wow animate__fadeInUp" data-wow-duration="0.5s">
+                                    <div class="item__inner">
+                                        <div class="item__inner">
+                                            <div class="icon"><img src="/static/media/2.ec9d013b7d4f44fa4112.png"
+                                                    alt="image"></div>
+                                            <div class="react-content">
+                                                <h3 class="react-title"><a href="/course">Innovative Courses</a></h3><a
+                                                    class="r__link" href="/course">Learn More <svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 wow animate__fadeInUp" data-wow-duration="0.7s">
+                                    <div class="item__inner">
+                                        <div class="item__inner">
+                                            <div class="icon"><img src="/static/media/3.0cf44447da5e6fb16e49.png"
+                                                    alt="image"></div>
+                                            <div class="react-content">
+                                                <h3 class="react-title"><a href="/course">Cloud Storage</a></h3><a
+                                                    class="r__link" href="/course">Learn More <svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 wow animate__fadeInUp" data-wow-duration="0.9s">
+                                    <div class="item__inner">
+                                        <div class="item__inner">
+                                            <div class="icon"><img src="/static/media/4.3d31b426e478a4d304b8.png"
+                                                    alt="image"></div>
+                                            <div class="react-content">
+                                                <h3 class="react-title"><a href="/course">Online Education</a></h3><a
+                                                    class="r__link" href="/course">Learn More <svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__area about__area_one p-relative pt---10 pb---120">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="about__image"><img src="/static/media/ab.fcda2469b98ffc37a148.png"
+                                            alt="About"><img class="react__shape__ab"
+                                            src="/static/media/badge.ae149076478c64c7b217.png" alt="Shape Image"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="about__content">
+                                        <h2 class="about__title wow animate__fadeInUp" data-wow-duration="0.3s">Welcome
+                                            to <br> <em>Echooling LMS Platform</em></h2>
+                                        <p class="about__paragraph wow animate__fadeInUp" data-wow-duration="0.5s">
+                                            Education is both the act of teaching knowledge to others and<br> the act of
+                                            receiving knowledge from someone else.</p>
+                                        <p class="about__paragraph2 wow animate__fadeInUp" data-wow-duration="0.7s">
+                                            Have questions? <a href="/"> Get Free Guide </a></p>
+                                        <p class="wow animate__fadeInUp" data-wow-duration="0.6s">Education also refers
+                                            to the knowledge received through schooling instruction <br>and to the
+                                            institution of teaching as a whole. The main purpose of education <br>is the
+                                            integral development of a person.</p>
+                                        <ul class="wow animate__fadeInUp" data-wow-duration="0.9s">
+                                            <li><a class="more-about" href="/about"> Read More <svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a></li>
+                                            <li class="last-li"><em>Get Support</em><a
+                                                    href="/mailto:support@react.com">support@react.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campus_sec pt---100 pb---110">
+                        <div class="container">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">Campus Life</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="about__content">
+                                        <ul>
+                                            <li class="wow animate__fadeInUp" data-wow-duration="0.3s">
+                                                <div class="icon"><img
+                                                        src="/static/media/1.f0958495fd0e3910630f618ed5b56f77.svg"
+                                                        alt="image"></div>
+                                                <div class="text">
+                                                    <h4>Do More, Stress Less</h4>
+                                                    <p>Why I say old chap that is spiffing he legged <br>it in my flat
+                                                        easy peasy.</p>
+                                                </div><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </li>
+                                            <li class="wow animate__fadeInUp" data-wow-duration="0.3s">
+                                                <div class="icon"><img
+                                                        src="/static/media/2.706df48b5d849602a8b526a683ad38e5.svg"
+                                                        alt="image"></div>
+                                                <div class="text">
+                                                    <h4>The Business Intelligence</h4>
+                                                    <p>Why I say old chap that is spiffing he legged <br>it in my flat
+                                                        easy peasy.</p>
+                                                </div><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </li>
+                                            <li class="wow animate__fadeInUp" data-wow-duration="0.3s">
+                                                <div class="icon"><img
+                                                        src="/static/media/3.cbcad3d0e3ca50b136e675f0b2b45c21.svg"
+                                                        alt="image"></div>
+                                                <div class="text">
+                                                    <h4>System Administration</h4>
+                                                    <p>Why I say old chap that is spiffing he legged <br>it in my flat
+                                                        easy peasy.</p>
+                                                </div><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-arrow-right">
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="about__image"><img src="/static/media/4.ff3894830e71cdd1965f.png"
+                                            alt="image"><img class="shape-1"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABdCAYAAADHcWrDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAieSURBVHgB7Z2/cxtFFMe/u7INzDAT8RcgOgo8doYmXUSgoIvTEcOMlb8gTslAYimGgS5ORxdlhvwYUsRUTBqsdNA5JAVdlI4OZSYTiOLb5b07CcuyTnp7P6STdJ+ZxL/2pLuv3r3bffv2rUKWqVaKWGyX4GHV/9miBGVPAKp42Mi2YNVzaP034D0DCi14C/uo1lvIKApZgQUuHLC4K7BemYRcpbMrITKKRDf79DoP6QNp4PKPDWSEyYoeCL1BIq8BmgS3RaSKbdAHUEfBe4gv7zYxISYj+vYXZMneFr19GROj8wF8fesmxsz4RPetun2RbvfN9C3aiSapUMeCuTku609f9OyKPYg6Fk0tbfELSJPt9YtQZpe++5T+vYnsswqj1nBmuYi9xw+REulYOvtsY67Rq69ieiG3oy+k0etJVnR2Jfo1PSDtJmYGtQOzWEuy35+c6NUKDVza96fcusNokq//KClfn4zo35zfgNE76TwoaZCjbJNGozTQwbPgVyRCF9sZQCm8S+1KsKn198nSbQ1X7uwgJvFF317foguvIikUiWssjSILDXgvGqjuut/W1TXqMb1ND0UadGl1ms4vubtP0bVevl1DDOKJfvXza4n4b6UavtBLpp5Kd636WYkGQjQgw1a80EIX8vNXbl1CRKKLfnX9Bv1fQRxYbKjaWOMifs/Kq9B7byAOWvFo9gIiEE30uIKz2J53AdXJxT9861eqGkv8iMK7ix7Hh0/Cskfhi6/3IrudCMK7iR5ZcD/MmsiTPzVq62T15POj4PhwlYtePc89gftwpwmDc6je3kfWiWX19pLUqGSxFx74aPsLXOMn1t6E/YcEv9fENNB40kL5Qwr1em+R8KecjoU6hU+WH+DXx3+NbAkJtfWnzp++RQ1bt6uYVqK5G7qrl06OChmMtnT248AaXJh2wZnG4wbKy4qELzscVaSo6psUoXwwrNFw0f14ircLF2ZB8C7RhD+FMysPsfdHM6yBHnq4au/BhVkSvAtfD1+XC9bc8COuIYSLfnW94ujHd2dO8C6+8MplLpUjrqHhkcGis1uxTg8ReoC8jDQknhrs4qYfjJOicDHM2geLXmhvOFm5oVhzlGjgNME9Es+cgx/iFVEMs/bjorOVG4e4Cvu7ScZQxol/nVbu30Os/bjo+tWag5U3Z9aPh8GjTmUbwtYDrf246FZdhJQCzmEe0UoeSx9g7UdFd+ux1PHVFMRT0oCvm0McMmiy/lWl9xd9lm7lsWVjYk1ZTT3WVsVtFc72/ngoOj9A5bmF9bl5eIbB1y+1dku69riYQ9F1uwwpSrsMFGYXXajL2x66mB73InYtzUzN/EwS1kHak+lxMT2iS12LvY6cQyx+lrU7dDGB6DxDLsVYt6jjrGPeqIvbFg7K/CUQ3Ziy6CDOspr3B2g/HB6QuhjjlflLILqyp0UHwaaWPjzVGCXTRWMl+OKjZGlnnOqWcxxeSCbBBjrrjnOXJVx6B/M5Ah0FL6GUUcR3n5V0ZxmhhFbuz0Ngv257MomHcbCwyu5FZuXK5lY+DKk+1hQ1rFeSNVZN5IRj1TNZO5B7sUpm6d2E/JwwhDNKtih3LznDUUKfrtQJLV4qIn3RnJFo5IydXPQJoIPccQmZX2I+NbCly0SX9nLmFSucW7b2uaZOvUx0XqeZMwyhUaqW3L1Y8w5ywlFWZpTUC6TYizA/T+kV5ISjVEnWTpPor5eakFEalv4790hXZXuG3ItLhKwz3ZTTh3y6s8UL3rozRzIX05luyunDejIr7+gciG7VI9FBnemmnGOcFbUy8HUORJdPN5Vzv96HS2ZcZ7ozED2YbpJ1HfuSIecel8y4znRnIHqQRiDsOgpvpblBmBnHaRqd6c7DgJdLppJLctIs4+JaevQ9FN0lU8l68oUDs4xuyxfD9WTGHV2mvn1+z7dkCYvmvUnWq504fr2E9lNRW86M27p9svtjXzy9IE8Ofa2jlemYFVysvKB2jhx65I/eQgPyJXuVufXtvi8Xr0Bs4WDxyPPyqOhBSMAhFdqbT2vX7WsOrXf7q2IMWF23xLeCdGKjjKvnNzFP8GI4l6ogA9ZmDVi862rtaovz8zAPuC/fH7g2a/DEtIu184zJgb4/F+EBrgritnx/4ArEkIIMjtbOseSF1y5+bvrgwp8ugg9Zvh+egsHWbh0SjIytdKogzR7+dTlVWm3CvtwJ+2N4ZaPG/r/4eIVCkSSmnDLOLCPNgu9jhwvvW3zvdIxWm7hy7/ewPw8vJ8UlkcrL7zhWbpsd4blatlU/wI36qBqNozO87FLVyc34x6A69a6Gz9+oOtxoSpbvy0oEfru+Cg9cz8uxh5J8lf2xELVatsFJSdFPeQVSfxCkovRQEq2ynyp+EOvVDUTZf8mhaJx895e9J79FKJfHFOk2reCjD175r5FVgp1q7tJ378MVxyp97lWla5/XaRYkavnr7Fl9HOtmuBLG1p2KyyHR6qfHE54ZyyZOQ0lipxp/n46XzkXjoonOxBeeqZODuz7WCkl+p4DPW1dipX9HFJyJLjqTjPDBBXCgP63dE4/sBpnAJoVBtezNqGUR44nOxCn2PhCaNe/uIRp1M9eje5smI/T/p2evkw+PFc6OLzoTvTs5Gr4LeJ8jP56hng9ccKb0ic562FL8zWOHnsylbOxz1CXu3hLZppnkPnbJ7dIYq8p+hunudrD1059IiOQsvZftL9Y6uzSWML00p2OXxn6ChywnJk3RrJJq+Q9LjoenVLQ5XdGZJDZxGh91P0qYcomV9EXv0hUf6nS23E76ln3sHTEJ/Jq+dkOcwpcGwe5iu/Be3Bx37ffJiN6Frb+wcJZ6PGtj+QDS3g1SehrICsEeomV/XRMvs4m9mStvHst7m5pHsfY2TYHsiD4ITmI6WKBRpikFy8DpQ1DqxLF21j7viMzdvBYWDvazPGnyHzlKekGZy/iqAAAAAElFTkSuQmCC"
+                                            alt="image"></div>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="more-about" href="/about"> More about Campus Life <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-arrow-right">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                    <div class="popular__course__area pt---100 pb---100">
+                        <div class="container">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">Popular Courses</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="row">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="course__item mb-30">
+                                        <div class="course__thumb"><a href="/course/1"><img
+                                                    src="/static/media/1.2b718c64abf3cba58c0a.png" alt="image"></a>
+                                        </div>
+                                        <div class="course__inner">
+                                            <ul>
+                                                <li>UX Design</li>
+                                                <li>5 Lessons</li>
+                                            </ul>
+                                            <h3 class="react-course-title"><a href="/course/1">Dave conservatoire is the
+                                                    Entirely free online</a></h3>
+                                            <div class="course__card-icon d-flex align-items-center">
+                                                <div class="course__card-icon--1"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-users">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg><span>56 Students</span></div>
+                                                <div class="react__user">$72.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="course__item mb-30">
+                                        <div class="course__thumb"><a href="/course/2"><img
+                                                    src="/static/media/2.0f4fbbe4e32c8eec212e.png" alt="image"></a>
+                                        </div>
+                                        <div class="course__inner">
+                                            <ul>
+                                                <li>UX Design</li>
+                                                <li>4 Lessons</li>
+                                            </ul>
+                                            <h3 class="react-course-title"><a href="/course/2">Strategy law and
+                                                    Organization foundation</a></h3>
+                                            <div class="course__card-icon d-flex align-items-center">
+                                                <div class="course__card-icon--1"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-users">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg><span>77 Students</span></div>
+                                                <div class="react__user">$68.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="course__item mb-30">
+                                        <div class="course__thumb"><a href="/course/3"><img
+                                                    src="/static/media/3.2f7b3c10359c070cae98.png" alt="image"></a>
+                                        </div>
+                                        <div class="course__inner">
+                                            <ul>
+                                                <li>UX Design</li>
+                                                <li>4 Lessons</li>
+                                            </ul>
+                                            <h3 class="react-course-title"><a href="/course/3">Python for Data Science
+                                                    &amp; Machine Learning</a></h3>
+                                            <div class="course__card-icon d-flex align-items-center">
+                                                <div class="course__card-icon--1"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-users">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg><span>77 Students</span></div>
+                                                <div class="react__user">$68.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="course__item mb-30">
+                                        <div class="course__thumb"><a href="/course/4"><img
+                                                    src="/static/media/4.1e8ed20eff0c42a15afb.png" alt="image"></a>
+                                        </div>
+                                        <div class="course__inner">
+                                            <ul>
+                                                <li>UX Design</li>
+                                                <li>4 Lessons</li>
+                                            </ul>
+                                            <h3 class="react-course-title"><a href="/course/4">The complete web develop
+                                                    Ment bootcamp.</a></h3>
+                                            <div class="course__card-icon d-flex align-items-center">
+                                                <div class="course__card-icon--1"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-users">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg><span>77 Students</span></div>
+                                                <div class="react__user">$68.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="view-courses" href="/course"> View All Courses <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-arrow-right">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                    <div class="count__area pb---110">
+                        <div class="container count__width">
+                            <div class="row">
+                                <div class="col-xxl-11 col-xl-11 col-lg-11 offset-lg-1">
+                                    <div class="row">
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 wow animate__fadeInUp"
+                                            data-wow-duration="0.3s">
+                                            <div class="count__content">
+                                                <p class="count__content--paragraph">Successfully <br>Trained</p>
+                                                <h3 class="count__content--title-1 counter"><span>1478</span></h3>
+                                                <p class="count__content--paragraph2">Enrolled Learners</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 wow animate__fadeInUp"
+                                            data-wow-duration="0.3s">
+                                            <div class="count__content">
+                                                <p class="count__content--paragraph">Successfully <br>Trained</p>
+                                                <h3 class="count__content--title-1 counter"><span>1731</span></h3>
+                                                <p class="count__content--paragraph2">Enrolled Learners</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 wow animate__fadeInUp"
+                                            data-wow-duration="0.3s">
+                                            <div class="count__content">
+                                                <p class="count__content--paragraph">Successfully <br>Trained</p>
+                                                <h3 class="count__content--title-1 counter"><span>280</span></h3>
+                                                <p class="count__content--paragraph2">Enrolled Learners</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 wow animate__fadeInUp"
+                                            data-wow-duration="0.3s">
+                                            <div class="count__content">
+                                                <p class="count__content--paragraph">Successfully <br>Trained</p>
+                                                <h3 class="count__content--title-1 counter"><span>1045</span></h3>
+                                                <p class="count__content--paragraph2">Enrolled Learners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="react-upcoming__event blog__area">
+                        <div class="container">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">Upcoming Events</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="event-slider owl-carousel wow animate__fadeInUp" data-wow-duration="0.3s">
+                                <div class="slick-slider slick-initialized" dir="ltr">
+                                    <div class="slick-list">
+                                        <div class="slick-track"
+                                            style="width: 6552px; opacity: 1; transform: translate3d(-3276px, 0px, 0px);">
+                                            <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> May, 2022
+                                                                </div>
+                                                                <div class="event_time">10:30AM - 12:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/5">A
+                                                                        Better Alternative To Grading Student
+                                                                        Writing</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/5">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>14</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">12:00PM - 01:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/6">12
+                                                                        Things Successful Mompreneurs</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/6">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> January, 2022
+                                                                </div>
+                                                                <div class="event_time">10:30AM - 12:00PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/1">A
+                                                                        Better Alternative To Grading Student
+                                                                        Writing</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/1">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>14</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">12:00PM - 01:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/2">12
+                                                                        Things Successful Mompreneurs</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/2">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>26</em> March, 2022
+                                                                </div>
+                                                                <div class="event_time">01:30PM - 02:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/3">Ethics
+                                                                        in AI Live Event Machines Judging.</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/3">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">03:00PM - 04:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/4">The
+                                                                        Importance Of Intrinsic Motivation.</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/4">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> May, 2022
+                                                                </div>
+                                                                <div class="event_time">10:30AM - 12:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/5">A
+                                                                        Better Alternative To Grading Student
+                                                                        Writing</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/5">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="5" class="slick-slide slick-active slick-current"
+                                                tabindex="-1" aria-hidden="false" style="outline: none; width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>14</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">12:00PM - 01:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/6">12
+                                                                        Things Successful Mompreneurs</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/6">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="6" tabindex="-1"
+                                                class="slick-slide slick-active slick-cloned" aria-hidden="false"
+                                                style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> January, 2022
+                                                                </div>
+                                                                <div class="event_time">10:30AM - 12:00PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/1">A
+                                                                        Better Alternative To Grading Student
+                                                                        Writing</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/1">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="7" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>14</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">12:00PM - 01:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/2">12
+                                                                        Things Successful Mompreneurs</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/2">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="8" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>26</em> March, 2022
+                                                                </div>
+                                                                <div class="event_time">01:30PM - 02:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/3">Ethics
+                                                                        in AI Live Event Machines Judging.</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/3">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="9" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">03:00PM - 04:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/4">The
+                                                                        Importance Of Intrinsic Motivation.</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/4">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="10" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>10</em> May, 2022
+                                                                </div>
+                                                                <div class="event_time">10:30AM - 12:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/5">A
+                                                                        Better Alternative To Grading Student
+                                                                        Writing</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/5">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="11" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 468px;">
+                                                <div>
+                                                    <div class="event__card">
+                                                        <div class="event__card--content">
+                                                            <div class="event__card--content-area">
+                                                                <div class="event__card--date"><em>14</em> April, 2022
+                                                                </div>
+                                                                <div class="event_time">12:00PM - 01:30PM</div>
+                                                                <h3 class="event__card--title"><a href="/event/6">12
+                                                                        Things Successful Mompreneurs</a></h3>
+                                                                <div class="event_location"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="feather feather-map-pin">
+                                                                        <path
+                                                                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">
+                                                                        </path>
+                                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                                    </svg> New York, USA</div><a
+                                                                    class="event__card--link" href="/event/6">Find Out
+                                                                    More <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24" viewBox="0 0 24 24"
+                                                                        fill="none" stroke="currentColor"
+                                                                        stroke-width="2" stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-arrow-right">
+                                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                                    </svg></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="slick-dots" style="display: block;">
+                                        <li class=""><button>1</button></li>
+                                        <li class=""><button>2</button></li>
+                                        <li class=""><button>3</button></li>
+                                        <li class=""><button>4</button></li>
+                                        <li class=""><button>5</button></li>
+                                        <li class="slick-active"><button>6</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="react-clients react-clientso home-testimonial pt---90 pb---120">
+                        <div class="container">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">What our student saying</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="client-slider wow animate__fadeInUp" data-wow-duration="0.3s">
+                                <div class="slick-slider slick-initialized" dir="ltr"><button type="button"
+                                        data-role="none" class="slick-arrow slick-prev" style="display: block;">
+                                        Previous</button>
+                                    <div class="slick-list">
+                                        <div class="slick-track"
+                                            style="width: 10296px; opacity: 1; transform: translate3d(-936px, 0px, 0px);">
+                                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="0" class="slick-slide slick-active slick-current"
+                                                tabindex="-1" aria-hidden="false" style="outline: none; width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                                style="outline: none; width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="5" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="6" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="7" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="8" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-index="9" tabindex="-1" class="slick-slide slick-cloned"
+                                                aria-hidden="true" style="width: 936px;">
+                                                <div>
+                                                    <div class="single-client">
+                                                        <div class="client-bottom"><span class="client-author"><img
+                                                                    src="/static/media/testimonial.b4a97b69f2bf8c02fc4f.png"
+                                                                    alt="Image"></span></div>
+                                                        <div class="client-content"><span class="client-title">Justin
+                                                                Case <em> Student</em></span>
+                                                            <p>Nulla porttitor accumsan tincidunt. vamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                                Curabitur non nulla sit amet nisl tempus convallis quis
+                                                                ac lectus. Quisque velit nisi, pretium ut lacinia in.
+                                                            </p>
+                                                            <div class="testimonial__ratings"><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star"></em><em
+                                                                    class="icon_star_alt"></em><span><em> 4.9</em> (14
+                                                                    Reviews)</span></div><img class="comma"
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAmCAYAAACYsfiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgBxZrPj9NGFMffjH8kcRKcNIkWrVYtXYVWKq3aKuXS01ZqK7X37a2XquKG1D8h5165VWr/gT1VSHBkLxwQQuIAB8RKIEAR4M0mwYkTrxMPfgGHEHa9frYHPpdVvBO/+b6ZeTPvTRicwFZbqHYH9HwFlOXnmgEewO50t/3DFN4D7bbgN7qgPXpqaZVPGyx83n9giY9PN7yrl5gb5z3suH+c235e0k83CiAcDSLf4HvcLY1u/cMckMDW1jXV/uzr4kStFnTu8Ki2QjUcxQHsi3dcG3aUgcFX31VB8GihK3iKmA2rxcHDNptARsydvlY8BURQeKWyOzxq9r0luHVBaBMVaid5MgrDMezr/zEbUvLNX6LCpo4BCcEBqFdvdldFL4ThyKYViziGU/75d1GEFLQuHJhpxCLajCn7vfM1CNb+8vPFh/3m+dRiQyzTMXG2QAKC7xm+nkvlsBAU3erYHy0/46ERLc8UyBTbhAS4/qgMGeLrit68eD8Xfp4L9nOQiUejDMWheVHksnc8gOmuLZzIce2euPVkYChWe6OXBwksO5/vfduUIjY0tBo0olCGVRUkYRq1uTP5J9qGNCNICyD2qAkB0pzPbb0w/wuSKfdBj9t2mtEucfS7GcedQ7rgfTEiBS6prIN8wbgXUtaxVMY9jU/6MAPJbH9xfJKyjDcRUvui7ysK3+xBrLQqDdaVeMGoXipK7YtdUjS+s8Nm/HB2CBKxz8QLjk9me2OQzLwjg9yz1NlNFuxdOuvKdD7GEx4awhwSJJF3IPZxcbNX7qm+4YMkFlPtdgVeHI6nmSXvScEl5k+hK0v0m7XVZv7df82DIJ/94NMbSzRnLLBkRO13gsm9vxu2pR30sjQ2MehbH470nY2ihQNwmNFoq77wI/dHzDBMFw/dqubnyswbj+YOKuhFRjkG8rrRv9VOXuTDiuXlTic/M9Z1xbFV1+fzmCCCflCKFlj2iXUgWOXLP4drlLzVZp0uBkbIGMyfy8KpxW2PO8B7OfKZblNKADJdIBUL9JnwEwmmViWi6sRpmKgWqf+8dsojCz63fSd2ujcnKNSDJPJlleR47TnQBQ82TJIRoZSkCaZWSBq/JhBcFxuk/LbSBzmHmSBye8yJ3ReM0Du/BXkDEJkOaQk9ehUk0OoAqeCnsleZGEkwtX6N2wB6FSSgaFCgtB++zsRIgulFcltKQoL7L3U6h+eA2IKpo4vHuM0f16Uk9PnxqEJpH05nJJZgLNZTR9fTixMZ0/nzP0SZeg44+z0sEqITBeM5Fi/a0hjJCpxlRnA7SfkO5vnLjo8UjGL/7w7JYleNZMGrW0WHNJWRVccfKxinMYpN8kuArEcXfwmQRGwwG+xVxx95UvkliIKPg8CgCfpNXm48CIyUMhtdvBxPcl+Mjv/JqI+urzx/CYgysy1mrNQwAAAAAElFTkSuQmCC"
+                                                                alt="Coma">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><button type="button" data-role="none" class="slick-arrow slick-next"
+                                        style="display: block;"> Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
+                        <div class="container blog__width">
+                            <div class="react__title__section text-center">
+                                <h2 class="react__tittle">Echooling News and Blogs</h2><img
+                                    src="data:image/png;base64,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"
+                                    alt="image">
+                            </div>
+                            <div class="row">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="blog__card mb-50">
+                                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
+                                                href="/blog/1"><img src="/static/media/1.987e87b22a8f90492eb4.jpg"
+                                                    alt="Kids future Schools &amp; Corona Prevent to Growth"></a><em
+                                                class="b_date">April 18</em></div>
+                                        <div class="blog__card--content">
+                                            <div class="blog__card--content-area mb-25"><span
+                                                    class="blog__card--date">Education</span>
+                                                <h3 class="blog__card--title"><a href="/blog/1"> Kids future Schools
+                                                        &amp; Corona Prevent to Growth</a></h3>
+                                            </div>
+                                            <div class="blog__card--icon d-flex align-items-center">
+                                                <div class="blog__card--icon-1"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-user">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="12" cy="7" r="4"></circle>
+                                                    </svg><span>Charlie Doyle</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="blog__card mb-50">
+                                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
+                                                href="/blog/2"><img src="/static/media/2.8f0076f5a86838542c39.jpg"
+                                                    alt="Echooling future Schools &amp; social Innovation"></a><em
+                                                class="b_date">April 18</em></div>
+                                        <div class="blog__card--content">
+                                            <div class="blog__card--content-area mb-25"><span
+                                                    class="blog__card--date">Education</span>
+                                                <h3 class="blog__card--title"><a href="/blog/2"> Echooling future
+                                                        Schools &amp; social Innovation</a></h3>
+                                            </div>
+                                            <div class="blog__card--icon d-flex align-items-center">
+                                                <div class="blog__card--icon-1"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-user">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="12" cy="7" r="4"></circle>
+                                                    </svg><span>Charlie Doyle</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="blog__card mb-50">
+                                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
+                                                href="/blog/3"><img src="/static/media/3.356c9579b8137ed75a03.jpg"
+                                                    alt="7 Learning system design tips For better eLearning"></a><em
+                                                class="b_date">April 18</em></div>
+                                        <div class="blog__card--content">
+                                            <div class="blog__card--content-area mb-25"><span
+                                                    class="blog__card--date">Education</span>
+                                                <h3 class="blog__card--title"><a href="/blog/3"> 7 Learning system
+                                                        design tips For better eLearning</a></h3>
+                                            </div>
+                                            <div class="blog__card--icon d-flex align-items-center">
+                                                <div class="blog__card--icon-1"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-user">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="12" cy="7" r="4"></circle>
+                                                    </svg><span>Charlie Doyle</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp"
+                                    data-wow-duration="0.3s">
+                                    <div class="blog__card mb-50">
+                                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
+                                                href="/blog/4"><img src="/static/media/1.987e87b22a8f90492eb4.jpg"
+                                                    alt="Why schools should continue remote study"></a><em
+                                                class="b_date">April 18</em></div>
+                                        <div class="blog__card--content">
+                                            <div class="blog__card--content-area mb-25"><span
+                                                    class="blog__card--date">Education</span>
+                                                <h3 class="blog__card--title"><a href="/blog/4"> Why schools should
+                                                        continue remote study</a></h3>
+                                            </div>
+                                            <div class="blog__card--icon d-flex align-items-center">
+                                                <div class="blog__card--icon-1"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-user">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="12" cy="7" r="4"></circle>
+                                                    </svg><span>Charlie Doyle</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="backscrollUp" class="home react__up___scroll"></div>
+                </div>
+            </div>
+            <footer id="react-footer" class="react-footer home-main">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-1">
+                                    <div class="footer-logo white"><a class="logo-text" href="/"><img
+                                                src="data:image/png;base64,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"
+                                                alt="Footer Logo"></a></div>
+                                    <h5 class="footer-subtitle">There are course and event custom <br>post types so you
+                                        can easily create and<br> manage course, events.</h5>
+                                    <ul class="footer-address">
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-phone">
+                                                <path
+                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                </path>
+                                            </svg><a href="tel:+(402)76244183"> +(402) 762 441 83 </a></li>
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-mail">
+                                                <path
+                                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                </path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg><a href="mailto:info@yourdmain.com"> info@echooling.com </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-2">
+                                    <h3 class="footer-title">About Us</h3>
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/course">Courses</a></li>
+                                            <li><a href="/event">Events</a></li>
+                                            <li><a href="/">Career</a></li>
+                                            <li><a href="/profile">Become a Teacher</a></li>
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-3">
+                                    <h3 class="footer-title">Useful Links</h3>
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li><a href="/">Browse Library</a></li>
+                                            <li><a href="/">Library</a></li>
+                                            <li><a href="/">Partners</a></li>
+                                            <li><a href="/blog">News &amp; Blog</a></li>
+                                            <li><a href="/">FAQ</a></li>
+                                            <li><a href="/">Tutorials</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="footer-widget footer-widget-4">
+                                    <h3 class="footer-title">Newsletter</h3>
+                                    <div class="footer3__form">
+                                        <p>Get the latest Echooling news <br>delivered to you inbox</p>
+                                        <form action="#"><input type="email" required=""
+                                                placeholder="Enter your email"><button class="footer3__form-1"><i
+                                                    class="arrow_right"></i></button></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="react-copy-left">© 2022 <a href="/">Echooling.</a> All Rights Reserved</div>
+                        <div class="react-copy-right">
+                            <ul class="social-links">
+                                <li class="follow">Follow us</li>
+                                <li><a href="/"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                <li><a href="/"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                <li><a href="/"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
+
 </html>

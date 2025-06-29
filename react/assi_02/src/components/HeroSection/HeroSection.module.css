@@ -1,0 +1,163 @@
+/* src/components/HeroSection/HeroSection.module.css */
+.heroSection {
+    height: 600px;
+    background-image: url('../../assets/images/hero-bg-desktop.jpg'); /* Desktop default */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom of the section */
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    padding-bottom: 80px; /* Add padding from the bottom */
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    padding-right: 50%; /* Pushes content to the left side */
+    padding-left: 15px; /* Match global container padding */
+    width: 100%; /* Ensure overlay takes full width for gradient */
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+    z-index: -1;
+}
+
+.badge {
+    background-color: #E24C4B;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.admissionsBtn {
+    display: flex;
+}
+
+.watchVideo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.watchVideo em {
+    font-style: normal; /* Override default italic for em tag */
+    line-height: 1.3;
+}
+
+.playBtn {
+    background-color: #fff;
+    color: #E24C4B;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: pulse 2s infinite;
+    text-decoration: none; /* Remove underline from a tag */
+}
+
+.playBtn:hover {
+    animation: none;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .heroSection {
+        height: 500px;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px; /* Adjust padding for mobile */
+        align-items: center; /* Center content vertically on smaller screens */
+    }
+    .overlay {
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .overlay::before {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+    }
+    .headline {
+        font-size: 2.5em;
+    }
+    .actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        height: 450px;
+        background-image: url('../../assets/images/hero-bg-mobile.jpg'); /* Mobile background */
+    }
+    .headline {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroSection {
+        height: 400px;
+    }
+    .headline {
+        font-size: 1.7em;
+    }
+    .playBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+    .admissionsBtn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+    .watchVideo {
+        font-size: 0.9em;
+    }
+}

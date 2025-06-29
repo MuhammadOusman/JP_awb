@@ -1,0 +1,59 @@
+/* src/components/TopBar/TopBar.module.css */
+.topBar {
+    background-color: #002B4B; /* Dark blue from screenshot */
+    color: #fff;
+    padding: 5px 0; /* Adjusted padding to make it more compact */
+    font-size: 0.9em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contactInfo span {
+    margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contactInfo a {
+    color: inherit; /* Ensure links are white */
+}
+
+.icon {
+    margin-right: 8px;
+    color: #55B494; /* Green accent */
+}
+
+.socialIcons a {
+    color: #fff;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: #55B494; /* Green accent on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactInfo {
+        margin-bottom: 10px;
+    }
+
+    .contactInfo span {
+        margin: 0 10px;
+    }
+
+    .socialIcons {
+        margin-top: 10px;
+    }
+}

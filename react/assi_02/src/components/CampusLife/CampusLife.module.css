@@ -1,0 +1,12 @@
+.campusLife { background-color: #fff; } .row { display: flex; flex-wrap: wrap; align-items: center; }
+.accordionCol { flex: 0 0 58.33%; max-width: 58.33%; padding: 0 15px; }
+.imageCol { flex: 0 0 41.67%; max-width: 41.67%; padding: 0 15px; }
+.aboutImage { position: relative; text-align: center; margin-left: 30px; }
+.aboutImage img { width: 100%; height: auto; border-radius: 8px; }
+.shape1 { position: absolute; bottom: 0; right: 0; width: 100px; height: auto; transform: translate(30%, 30%); z-index: 2; }
+.aboutContent ul { padding: 0; } .bottomLink { text-align: center; margin-top: 50px; }
+@media (max-width: 992px) {
+    .accordionCol, .imageCol { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+    .aboutImage { margin-left: 0; margin-top: 50px; }
+    .shape1 { position: static; transform: none; margin: 20px auto 0; }
+}

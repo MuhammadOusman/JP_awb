@@ -1,0 +1,6 @@
+.popularCourses { background-color: #fff; }
+.courseGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 30px; justify-content: center; }
+.viewAllCourses { text-align: center; margin-top: 50px; }
+@media (max-width: 1200px) { .courseGrid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+@media (max-width: 992px) { .courseGrid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+@media (max-width: 768px) { .courseGrid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }

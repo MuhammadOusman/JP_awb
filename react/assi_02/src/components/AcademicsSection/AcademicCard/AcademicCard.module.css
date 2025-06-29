@@ -1,0 +1,9 @@
+.itemInner { text-align: center; padding: 40px 20px; background-color: #f8f8f8; border-radius: 8px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.itemInner:hover { background-color: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transform: translateY(-5px); }
+.icon { margin-bottom: 25px; display: inline-block; }
+.icon img { width: 80px; height: auto; }
+.content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+.title { font-family: 'Montserrat', sans-serif; font-size: 1.4em; font-weight: 600; margin-bottom: 15px; }
+.title a { color: #002B4B; transition: color 0.3s ease; }
+.title a:hover { color: #E24C4B; }
+.link { font-size: 0.95em; }

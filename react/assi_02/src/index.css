@@ -1,0 +1,137 @@
+/* src/index.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Basic Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #555;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+/* Reusable Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Title Pattern */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #002B4B;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title em {
+    color: #55B494;
+    font-style: normal;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #55B494;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Common button style */
+.react-btn-common {
+    background-color: #E24C4B;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.react-btn-common:hover {
+    background-color: #c93b3b;
+}
+
+/* Common link with arrow */
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    color: #E24C4B;
+    transition: color 0.3s ease;
+}
+
+.arrow-link svg {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.arrow-link:hover {
+    color: #c93b3b;
+}
+
+.arrow-link:hover svg {
+    transform: translateX(5px);
+}
+
+
+/* Common padding/margin utilities */
+.pt---100 { padding-top: 100px; }
+.pb---70 { padding-bottom: 70px; }
+.pb---120 { padding-bottom: 120px; }
+.pb---110 { padding-bottom: 110px; }
+.pt---90 { padding-top: 90px; }
+.pt---120 { padding-top: 120px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-50 { margin-bottom: 50px; }
+
+.graybg-home {
+    background-color: #f8f8f8;
+}

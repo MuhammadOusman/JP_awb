@@ -1,0 +1,4 @@
+.countersSection { background-color: #E24C4B; color: #fff; padding-top: 100px; position: relative; z-index: 1; }
+.countersGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; justify-content: center; padding: 0 15px; }
+@media (max-width: 992px) { .countersGrid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+@media (max-width: 768px) { .countersGrid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; } }

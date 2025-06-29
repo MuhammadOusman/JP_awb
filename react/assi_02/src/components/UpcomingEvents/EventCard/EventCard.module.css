@@ -1,0 +1,11 @@
+.eventCard { background-color: #fff; border-radius: 8px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); margin-bottom: 30px; transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+.eventCard:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+.content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.contentArea { flex-grow: 1; }
+.date { font-family: 'Montserrat', sans-serif; font-size: 1.1em; font-weight: 500; color: #555; margin-bottom: 5px; }
+.date em { font-style: normal; font-size: 1.8em; font-weight: 700; color: #E24C4B; margin-right: 8px; }
+.time { font-size: 0.9em; color: #777; margin-bottom: 15px; }
+.title { font-family: 'Montserrat', sans-serif; font-size: 1.3em; font-weight: 600; line-height: 1.4; margin-bottom: 15px; }
+.title a { color: #002B4B; transition: color 0.3s ease; } .title a:hover { color: #E24C4B; }
+.location { display: flex; align-items: center; font-size: 0.95em; color: #777; margin-bottom: 20px; }
+.location svg { margin-right: 8px; color: #55B494; } .link { font-size: 0.9em; margin-top: auto; }

@@ -1,0 +1,4 @@
+.upcomingEvents { padding-top: 100px; padding-bottom: 120px; background-color: #fff; }
+.eventGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center; }
+@media (max-width: 992px) { .eventGrid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+@media (max-width: 768px) { .eventGrid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
