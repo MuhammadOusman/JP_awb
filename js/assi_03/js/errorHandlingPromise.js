@@ -1,5 +1,8 @@
 console.log("--- Error Handling (Promise) ---");
 
+
+
+(function() {
 function fetchUserData(userData) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -38,3 +41,5 @@ fetchUserData(null)
     .catch(error => {
         console.error("Error fetching user data (expected):", error);
     });
+})();
+

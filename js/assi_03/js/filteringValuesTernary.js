@@ -1,5 +1,8 @@
 console.log("--- Filtering Values (Ternary) ---");
 
+
+
+(function() {
 const strings = ["apple", "banana", "cat", "dog", "elephant", "fig"];
 
 const longStrings = strings.filter(str =>
@@ -8,3 +11,5 @@ const longStrings = strings.filter(str =>
 
 console.log("Original strings:", strings);
 console.log("Long strings (length > 3):", longStrings);
+})();
+

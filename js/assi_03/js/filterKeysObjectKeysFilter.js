@@ -1,5 +1,8 @@
 console.log("--- Filter Keys (Object.keys() + filter()) ---");
 
+
+
+(function() {
 const inventory = {
     apples: 15,
     bananas: 8,
@@ -14,3 +17,5 @@ const keysWithValueGreaterThan10 = Object.keys(inventory).filter(key => {
 
 console.log("Inventory Object:", inventory);
 console.log("Keys with value > 10:", keysWithValueGreaterThan10);
+})();
+

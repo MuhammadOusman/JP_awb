@@ -1,5 +1,8 @@
 console.log("--- List Property Values (Object.values()) ---");
 
+
+
+(function() {
 const movie = {
     title: "Inception",
     director: "Christopher Nolan",
@@ -14,3 +17,5 @@ console.log("Property Values:", movieValues);
 
 const mixedData = { a: 1, b: "hello", c: true };
 console.log("Values of mixedData:", Object.values(mixedData));
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Re-assignment ---");
 
+
+
+(function() {
 console.log("Trying var re-assignment:");
 var assignVar = "Initial var value";
 console.log("assignVar initial:", assignVar);
@@ -21,3 +24,5 @@ try {
 } catch (e) {
     console.error("Error re-assigning 'assignConst':", e.message);
 }
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Block Scope ---");
 
+
+
+(function() {
 if (true) {
     var varBlock = "I am var in block";
     let letBlock = "I am let in block";
@@ -25,3 +28,5 @@ try {
 } catch (e) {
     console.error("Outside block (constBlock error):", e.message);
 }
+})();
+

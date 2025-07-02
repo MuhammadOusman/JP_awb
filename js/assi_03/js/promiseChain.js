@@ -1,5 +1,8 @@
 console.log("--- Promise Chain ---");
 
+
+
+(function() {
 function fetchData() {
     console.log("Fetching data for promise chain...");
     return new Promise(resolve => {
@@ -23,3 +26,5 @@ fetchData()
     });
 
 console.log("Promise chain initiated.");
+})();
+

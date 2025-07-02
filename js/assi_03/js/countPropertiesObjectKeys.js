@@ -1,5 +1,8 @@
 console.log("--- Count Properties (Object.keys()) ---");
 
+
+
+(function() {
 const student = {
     name: "Sarah Johnson",
     age: 16,
@@ -15,3 +18,5 @@ console.log("Number of properties:", numberOfProperties);
 
 const car = { make: "Ford", model: "Focus" };
 console.log("Number of properties in car object:", Object.keys(car).length);
+})();
+

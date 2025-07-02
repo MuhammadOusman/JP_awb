@@ -1,5 +1,8 @@
 console.log("--- Array of Arrays (Nested Destructuring) ---");
 
+
+
+(function() {
 const nestedArray = [[1, 2], [3, 4], [5, 6]];
 
 const [[a,], [b,], [c,]] = nestedArray;
@@ -14,3 +17,5 @@ console.log("\nSecond elements:");
 console.log("Variable x:", x);
 console.log("Variable y:", y);
 console.log("Variable z:", z);
+})();
+

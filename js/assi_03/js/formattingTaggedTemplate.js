@@ -1,5 +1,8 @@
 console.log("--- Formatting (Tagged Template) ---");
 
+
+
+(function() {
 function uppercaseFormatter(strings, ...values) {
     let result = "";
     strings.forEach((str, i) => {
@@ -16,3 +19,5 @@ const price = 1200;
 const formattedOutput = uppercaseFormatter`The ${productName} costs $${price}.`;
 
 console.log(formattedOutput);
+})();
+

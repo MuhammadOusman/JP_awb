@@ -1,5 +1,8 @@
 console.log("--- Iterate Over Entries (Object.entries()) ---");
 
+
+
+(function() {
 const settings = {
     theme: "dark",
     notifications: true,
@@ -14,3 +17,5 @@ console.log("Iterating over entries:");
 settingsEntries.forEach(([key, value]) => {
     console.log(`Key: ${key}, Value: ${value}`);
 });
+})();
+

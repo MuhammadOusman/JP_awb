@@ -1,5 +1,8 @@
 console.log("--- Object within an Object (Nested Destructuring) ---");
 
+
+
+(function() {
 const userProfile = {
     username: "coder_dude",
     details: {
@@ -18,3 +21,5 @@ console.log("Original user profile:", userProfile);
 console.log("Username:", username);
 console.log("Email:", email);
 console.log("Address:", address);
+})();
+

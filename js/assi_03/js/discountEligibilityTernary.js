@@ -1,5 +1,8 @@
 console.log("--- Discount Eligibility (Ternary) ---");
 
+
+
+(function() {
 const isMember = true;
 const purchaseAmount = 150;
 
@@ -16,3 +19,5 @@ const isMember3 = true;
 const purchaseAmount3 = 80;
 const discount3 = (isMember3 && purchaseAmount3 > 100) ? (purchaseAmount3 * 0.10) : 0;
 console.log(`Is Member: ${isMember3}, Purchase Amount: $${purchaseAmount3}, Discount: $${discount3.toFixed(2)}`);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Object Parameters (Destructuring) ---");
 
+
+
+(function() {
 function displayUser({ name, age }) {
     console.log(`User Name: ${name}, Age: ${age}`);
 }
@@ -13,3 +16,5 @@ function displayUserWithDefaults({ name = "Guest", age = "Unknown" }) {
 }
 displayUserWithDefaults({ name: "Eve" });
 displayUserWithDefaults({});
+})();
+

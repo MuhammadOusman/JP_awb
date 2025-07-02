@@ -1,5 +1,8 @@
 console.log("--- Re-declaration ---");
 
+
+
+(function() {
 console.log("Trying var re-declaration:");
 var myVar = "First value";
 console.log("myVar after first declaration:", myVar);
@@ -25,3 +28,5 @@ try {
 } catch (e) {
     console.error("Error re-declaring 'myConst':", e.message);
 }
+})();
+

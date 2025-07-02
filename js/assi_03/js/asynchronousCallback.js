@@ -1,5 +1,8 @@
 console.log("--- Asynchronous Callback ---");
 
+
+
+(function() {
 function fetchData(callback) {
     console.log("Fetching data...");
     setTimeout(() => {
@@ -16,3 +19,5 @@ function displayData(data) {
 
 fetchData(displayData);
 console.log("Request sent. Waiting for data...");
+})();
+

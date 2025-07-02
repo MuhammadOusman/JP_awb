@@ -1,5 +1,8 @@
 console.log("--- Grade Evaluation (Ternary) ---");
 
+
+
+(function() {
 const score = 85;
 
 const grade =
@@ -28,3 +31,5 @@ const grade3 =
     (score3 >= 60) ? "D" :
     "F";
 console.log(`Score: ${score3}, Grade: ${grade3}`);
+})();
+

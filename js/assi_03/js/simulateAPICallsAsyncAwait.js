@@ -1,5 +1,10 @@
 // --- simulateAPICallsAsyncAwait.js ---
 
+
+
+(function() {
+(function() {
+
 console.log("--- Simulate API Calls (Async/Await Sequence) ---");
 
 function apiCall(callNumber) {
@@ -38,3 +43,8 @@ async function getData() {
 
 getData();
 getData();
+})();
+
+
+})();
+

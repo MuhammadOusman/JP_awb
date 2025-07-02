@@ -1,5 +1,8 @@
 console.log("--- Passing Array Elements as Arguments (Spread Operator) ---");
 
+
+
+(function() {
 function sum(a, b, c) {
     return a + b + c;
 }
@@ -18,3 +21,5 @@ console.log(`Sum of [5, 10] using spread: ${partialSum}`);
 const fourNumbers = [1, 2, 3, 4];
 const excessiveSum = sum(...fourNumbers);
 console.log(`Sum of [1, 2, 3, 4] using spread: ${excessiveSum}`);
+})();
+

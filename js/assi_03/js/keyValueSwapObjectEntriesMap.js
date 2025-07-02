@@ -1,5 +1,8 @@
 console.log("--- Key-Value Swap (Object.entries() + map()) ---");
 
+
+
+(function() {
 const roles = {
     admin: "Alice",
     editor: "Bob",
@@ -14,3 +17,5 @@ const swappedRoles = Object.fromEntries(swappedEntries);
 
 console.log("Original Roles:", roles);
 console.log("Swapped Roles:", swappedRoles);
+})();
+

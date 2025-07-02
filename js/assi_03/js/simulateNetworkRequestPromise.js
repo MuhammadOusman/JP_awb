@@ -1,5 +1,8 @@
 console.log("--- Simulate Network Request (Promise) ---");
 
+
+
+(function() {
 function getWeather(shouldSucceed = true) {
     return new Promise((resolve, reject) => {
         const delayTime = 1000;
@@ -37,3 +40,5 @@ getWeather(false)
         console.error("Weather request failed (expected):", error);
     });
 console.log("Request 2 sent...");
+})();
+

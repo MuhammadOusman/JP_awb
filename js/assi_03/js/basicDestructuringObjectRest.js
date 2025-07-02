@@ -1,5 +1,8 @@
 console.log("--- Basic Destructuring (Object Rest Operator) ---");
 
+
+
+(function() {
 const person = {
     name: "Jane Doe",
     age: 25,
@@ -13,3 +16,5 @@ console.log("Original person object:", person);
 console.log("Name:", name);
 console.log("Email:", email);
 console.log("Remaining properties (rest):", restOfPerson);
+})();
+

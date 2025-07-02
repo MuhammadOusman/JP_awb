@@ -1,5 +1,8 @@
 console.log("--- Merging Objects (Spread Operator) ---");
 
+
+
+(function() {
 const object1 = { a: 1, b: 2, c: 3 };
 const object2 = { c: 4, d: 5, e: 6 };
 
@@ -13,3 +16,5 @@ console.log("Observation: For overlapping keys (like 'c'), the value from the *l
 const object3 = { b: 9, f: 7 };
 const mergedObjectExtended = { ...object1, ...object2, ...object3 };
 console.log("Merged Object (extended):", mergedObjectExtended);
+})();
+

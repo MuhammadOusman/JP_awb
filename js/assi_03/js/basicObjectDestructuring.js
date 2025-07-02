@@ -1,5 +1,8 @@
 console.log("--- Basic Destructuring (Object) ---");
 
+
+
+(function() {
 const person = {
     name: "Chris Evans",
     age: 42,
@@ -15,3 +18,5 @@ console.log("City:", city);
 
 const { occupation } = person;
 console.log("Occupation (undefined as it doesn't exist):", occupation);
+})();
+

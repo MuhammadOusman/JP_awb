@@ -1,5 +1,8 @@
 console.log("--- Temporal Dead Zone (TDZ) ---");
 
+
+
+(function() {
 console.log("Inside a block scope:");
 if (true) {
     try {
@@ -18,3 +21,5 @@ if (true) {
     const tdzConst = "I am a const variable";
     console.log("Logging 'tdzConst' after declaration:", tdzConst);
 }
+})();
+

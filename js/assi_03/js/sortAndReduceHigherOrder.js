@@ -1,5 +1,8 @@
 console.log("--- Sort and Reduce (Higher-Order Function) ---");
 
+
+
+(function() {
 const words = ["apple", "banana", "cherry", "date"];
 
 function sortAndReduce(arr, sortFn, reduceFn) {
@@ -15,3 +18,5 @@ const resultString = sortAndReduce(words, alphabeticalSort, concatenateWithSpace
 
 console.log("Original words:", words);
 console.log("Sorted and concatenated string:", resultString);
+})();
+

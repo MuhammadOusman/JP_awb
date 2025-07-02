@@ -1,5 +1,8 @@
 console.log("--- Greeting Message (Default Parameters) ---");
 
+
+
+(function() {
 function greet(name = "") {
     if (name === "") {
         return "Hello, guest!";
@@ -12,3 +15,5 @@ console.log(greet("Emma"));
 console.log(greet(""));
 console.log(greet());
 console.log(greet(undefined));
+})();
+

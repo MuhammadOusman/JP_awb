@@ -1,5 +1,8 @@
 console.log("--- Copying an Object (Spread Operator) ---");
 
+
+
+(function() {
 const originalObject = { name: "Alice", age: 30, details: { city: "New York" } };
 
 const copiedObject = { ...originalObject };
@@ -14,3 +17,5 @@ originalObject.details.city = "London";
 console.log("\nAfter modifying copiedObject.age and originalObject.details.city:");
 console.log("Original Object:", originalObject);
 console.log("Copied Object:", copiedObject);
+})();
+

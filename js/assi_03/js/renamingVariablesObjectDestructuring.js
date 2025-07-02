@@ -1,5 +1,8 @@
 console.log("--- Renaming Variables (Object Destructuring) ---");
 
+
+
+(function() {
 const car = {
     make: "Toyota",
     model: "Camry",
@@ -12,3 +15,5 @@ console.log("Original car object:", car);
 console.log("Car Make:", carMake);
 console.log("Car Model:", carModel);
 console.log("Car Year:", carYear);
+})();
+

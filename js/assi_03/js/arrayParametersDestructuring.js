@@ -1,5 +1,8 @@
 console.log("--- Array Parameters (Destructuring) ---");
 
+
+
+(function() {
 function printCoordinates([x, y]) {
     console.log(`Coordinates: X=${x}, Y=${y}`);
 }
@@ -13,3 +16,5 @@ function printCoordinatesWithDefaults([x = 0, y = 0]) {
 }
 printCoordinatesWithDefaults([5]);
 printCoordinatesWithDefaults([]);
+})();
+

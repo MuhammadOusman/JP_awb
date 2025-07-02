@@ -1,5 +1,8 @@
 console.log("--- Error Handling in async/await ---");
 
+
+
+(function() {
 function fetchUserWithError(userId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -26,3 +29,5 @@ async function getUserInfo(userId) {
 getUserInfo(10);
 getUserInfo(null);
 getUserInfo(0);
+})();
+

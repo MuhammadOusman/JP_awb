@@ -1,5 +1,8 @@
 console.log("--- List Entries (Object.entries()) ---");
 
+
+
+(function() {
 const car = {
     make: "Honda",
     model: "Civic",
@@ -10,3 +13,5 @@ const carEntries = Object.entries(car);
 
 console.log("Car Object:", car);
 console.log("Key-Value Pairs (Entries):", carEntries);
+})();
+

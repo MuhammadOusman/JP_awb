@@ -1,5 +1,8 @@
 console.log("--- Function Scope ---");
 
+
+
+(function() {
 function testFunctionScope() {
     var varFunc = "I am var in function";
     let letFunc = "I am let in function";
@@ -31,3 +34,5 @@ try {
 } catch (e) {
     console.error("Outside function (constFunc error):", e.message);
 }
+})();
+

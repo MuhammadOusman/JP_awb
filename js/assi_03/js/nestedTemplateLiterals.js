@@ -1,5 +1,8 @@
 console.log("--- Nested Template Literals ---");
 
+
+
+(function() {
 const products = [
     { id: 1, name: "Laptop", price: 1200 },
     { id: 2, name: "Mouse", price: 25 },
@@ -28,3 +31,5 @@ const tableHTML = `
 
 console.log("Generated Nested HTML Table:");
 console.log(tableHTML);
+})();
+

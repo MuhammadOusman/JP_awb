@@ -1,5 +1,8 @@
 console.log("--- Mix of Arrays and Objects (Nested Destructuring) ---");
 
+
+
+(function() {
 const data = {
     id: "user_001",
     info: [
@@ -21,3 +24,5 @@ console.log("Age:", age);
 
 const { info: [,, { city }] } = data;
 console.log("City:", city);
+})();
+

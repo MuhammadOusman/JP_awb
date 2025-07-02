@@ -1,5 +1,8 @@
 console.log("--- Fetch Data with async/await ---");
 
+
+
+(function() {
 function fetchUserData(userData) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -26,3 +29,5 @@ async function getUserData(userId) {
 
 getUserData(101);
 getUserData(undefined);
+})();
+

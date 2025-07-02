@@ -1,5 +1,8 @@
 console.log("--- Skipping Elements (Array Destructuring) ---");
 
+
+
+(function() {
 const colors = ["red", "green", "blue", "yellow"];
 
 const [primaryColor, , tertiaryColor] = colors;
@@ -14,3 +17,5 @@ console.log("\nNumbers example:");
 console.log("Original numbers:", numbers);
 console.log("Fourth number:", fourthNum);
 console.log("Fifth number:", fifthNum);
+})();
+

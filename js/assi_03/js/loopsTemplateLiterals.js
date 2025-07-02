@@ -1,5 +1,8 @@
 console.log("--- Loops within Template Literals ---");
 
+
+
+(function() {
 const shoppingList = ["Milk", "Eggs", "Bread", "Cheese"];
 
 const htmlList = `
@@ -10,3 +13,5 @@ const htmlList = `
 
 console.log("Generated HTML List:");
 console.log(htmlList);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Transform Values (Object.entries() + map()) ---");
 
+
+
+(function() {
 const temperaturesCelsius = {
     morning: 20,
     afternoon: 28,
@@ -15,3 +18,5 @@ const temperaturesFahrenheit = Object.fromEntries(temperaturesFahrenheitEntries)
 
 console.log("Temperatures in Celsius:", temperaturesCelsius);
 console.log("Temperatures in Fahrenheit:", temperaturesFahrenheit);
+})();
+

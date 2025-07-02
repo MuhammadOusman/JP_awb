@@ -1,5 +1,8 @@
 console.log("--- Filter and Map (Higher-Order Function) ---");
 
+
+
+(function() {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function filterAndMap(arr, filterFn, mapFn) {
@@ -15,3 +18,5 @@ const result = filterAndMap(numbers, isOdd, square);
 
 console.log("Original numbers:", numbers);
 console.log("Filtered odd numbers and then squared:", result);
+})();
+

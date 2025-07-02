@@ -1,5 +1,8 @@
 console.log("--- When to use var, let, and const ---");
 
+
+
+(function() {
 console.log("\nGood use case for `var` (mostly historical/legacy):");
 function processItem(item) {
     if (item.quantity > 0) {
@@ -33,3 +36,5 @@ console.log("Initial config:", config);
 config.theme = "light";
 config.language = "en-US";
 console.log("Modified config (allowed):", config);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Updating Object Properties (Spread Operator) ---");
 
+
+
+(function() {
 const user = {
     name: "John Doe",
     age: 28,
@@ -14,3 +17,5 @@ const updatedUser = {
 
 console.log("Original User:", user);
 console.log("Updated User:", updatedUser);
+})();
+

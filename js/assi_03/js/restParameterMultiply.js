@@ -1,5 +1,8 @@
 console.log("--- Rest Parameter with Spread Operator ---");
 
+
+
+(function() {
 function multiply(factor, ...numbers) {
     const results = numbers.map(num => num * factor);
     return results;
@@ -13,3 +16,5 @@ console.log("Multiply 10,20 by 2:", multipliedResult2);
 
 const multipliedResult3 = multiply(3);
 console.log("Multiply nothing by 3:", multipliedResult3);
+})();
+

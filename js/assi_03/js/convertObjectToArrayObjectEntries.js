@@ -1,5 +1,8 @@
 console.log("--- Convert Object to Array (Object.entries()) ---");
 
+
+
+(function() {
 const person = {
     firstName: "Michael",
     lastName: "Scott",
@@ -10,3 +13,5 @@ const personArray = Object.entries(person);
 
 console.log("Person Object:", person);
 console.log("Converted to Array of Key-Value Pairs:", personArray);
+})();
+

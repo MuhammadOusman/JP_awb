@@ -1,5 +1,8 @@
 console.log("--- Copying an Array (Spread Operator) ---");
 
+
+
+(function() {
 const originalArray = [1, 2, 3, { a: 4 }];
 
 const copiedArray = [...originalArray];
@@ -14,3 +17,5 @@ originalArray[3].a = 50;
 console.log("\nAfter modifying copiedArray[0] and originalArray[3].a:");
 console.log("Original Array:", originalArray);
 console.log("Copied Array:", copiedArray);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Simple async Function ---");
 
+
+
+(function() {
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -12,3 +15,5 @@ async function sayHello() {
 
 sayHello();
 console.log("Async function initiated. Program continues executing while `sayHello` awaits.");
+})();
+

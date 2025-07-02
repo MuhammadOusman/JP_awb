@@ -1,5 +1,8 @@
 console.log("--- List Property Names (Object.keys()) ---");
 
+
+
+(function() {
 const book = {
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
@@ -13,3 +16,5 @@ console.log("Property Names (Keys):", bookKeys);
 
 const emptyObject = {};
 console.log("Keys of an empty object:", Object.keys(emptyObject));
+})();
+

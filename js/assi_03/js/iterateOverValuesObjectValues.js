@@ -1,5 +1,8 @@
 console.log("--- Iterate Over Values (Object.values()) ---");
 
+
+
+(function() {
 const user = {
     username: "jane_doe",
     email: "jane.doe@example.com",
@@ -14,3 +17,5 @@ console.log("Iterating over values:");
 userValues.forEach(value => {
     console.log(`Value: ${value}`);
 });
+})();
+

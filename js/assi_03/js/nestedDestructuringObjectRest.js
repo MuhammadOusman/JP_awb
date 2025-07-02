@@ -1,5 +1,8 @@
 console.log("--- Nested Destructuring (Object Rest Operator) ---");
 
+
+
+(function() {
 const student = {
     id: "S101",
     name: "Emily White",
@@ -25,3 +28,5 @@ console.log("Name:", name);
 console.log("Major:", major);
 console.log("Rest of info (e.g., university):", restOfInfo);
 console.log("Rest of student (e.g., grades):", restOfStudent);
+})();
+

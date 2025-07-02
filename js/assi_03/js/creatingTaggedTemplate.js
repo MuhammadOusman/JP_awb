@@ -1,5 +1,10 @@
 // --- creatingTaggedTemplate.js ---
 
+
+
+(function() {
+(function() {
+
 console.log("--- Creating a Tagged Template ---");
 
 function logTag(strings, ...values) {
@@ -21,3 +26,8 @@ const role = "Developer";
 const message = logTag`User: ${user}, Role: ${role}. Welcome!`;
 
 console.log(message);
+})();
+
+
+})();
+

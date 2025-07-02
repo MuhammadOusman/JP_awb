@@ -1,5 +1,8 @@
 console.log("--- Fetch and Process Data (Async/Await) ---");
 
+
+
+(function() {
 function fetchUser(userId) {
     return new Promise(resolve => {
         setTimeout(() => {
@@ -39,3 +42,5 @@ async function getUserAndPosts(userId) {
 
 getUserAndPosts(1);
 getUserAndPosts(2);
+})();
+

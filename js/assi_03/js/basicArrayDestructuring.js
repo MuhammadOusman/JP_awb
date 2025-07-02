@@ -1,5 +1,8 @@
 console.log("--- Basic Destructuring (Array) ---");
 
+
+
+(function() {
 const fruits = ["apple", "banana", "cherry"];
 
 const [firstFruit, secondFruit, thirdFruit] = fruits;
@@ -14,3 +17,5 @@ const [c1, c2] = colors;
 console.log("\nColors example:");
 console.log("C1:", c1);
 console.log("C2:", c2);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- First and Rest (Array Destructuring) ---");
 
+
+
+(function() {
 const numbersArray = [10, 20, 30, 40, 50, 60];
 
 const [first, ...rest] = numbersArray;
@@ -13,3 +16,5 @@ const [primaryColor, ...remainingColors] = colors;
 console.log("\nColors example:");
 console.log("Primary Color:", primaryColor);
 console.log("Remaining Colors:", remainingColors);
+})();
+

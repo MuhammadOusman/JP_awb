@@ -1,5 +1,8 @@
 console.log("--- Rest Operator (Array Destructuring) ---");
 
+
+
+(function() {
 const numbers = [1, 2, 3, 4, 5];
 
 const [firstNumber, ...remainingNumbers] = numbers;
@@ -13,3 +16,5 @@ const [singleNum, ...emptyRest] = singleElementArray;
 console.log("\nSingle element array example:");
 console.log("Single Number:", singleNum);
 console.log("Empty Rest:", emptyRest);
+})();
+

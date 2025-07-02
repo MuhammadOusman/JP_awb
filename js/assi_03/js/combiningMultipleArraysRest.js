@@ -1,5 +1,8 @@
 console.log("--- Combining Multiple Arrays (Rest Parameter) ---");
 
+
+
+(function() {
 function combineArrays(...arrays) {
     let combined = [];
     for (const arr of arrays) {
@@ -23,3 +26,5 @@ console.log("Single array combined:", singleArray);
 
 const noArrays = combineArrays();
 console.log("No arrays combined:", noArrays);
+})();
+

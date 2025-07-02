@@ -1,5 +1,8 @@
 console.log("--- Hoisting with let and const ---");
 
+
+
+(function() {
 console.log("Trying to log 'hoistedLet' before declaration:");
 try {
     console.log("Value of 'hoistedLet':", hoistedLet);
@@ -17,3 +20,5 @@ try {
 }
 const hoistedConst = "I am const";
 console.log("Value of 'hoistedConst' after declaration:", hoistedConst);
+})();
+

@@ -1,5 +1,8 @@
 console.log("--- Combine and Sort Arrays (Rest Operator) ---");
 
+
+
+(function() {
 function combineAndSort(...arrays) {
     const allElements = [].concat(...arrays);
     return allElements.sort((a, b) => {
@@ -20,3 +23,5 @@ const wordsB = ["banana", "cat"];
 console.log("Combined and sorted words:", combineAndSort(wordsA, wordsB));
 
 console.log("Combined and sorted mixed:", combineAndSort([1, "c"], ["b", 2]));
+})();
+

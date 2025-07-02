@@ -1,5 +1,8 @@
 console.log("--- Default Values (Object Destructuring) ---");
 
+
+
+(function() {
 const settings1 = {
     theme: "dark",
     language: "es"
@@ -19,3 +22,5 @@ console.log("Language:", language1);
 console.log("\nSettings 2 (language NOT provided):");
 console.log("Theme:", theme2);
 console.log("Language:", language2);
+})();
+
