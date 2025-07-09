@@ -1,0 +1,125 @@
+.card-container {
+  background: linear-gradient(to bottom left, #ffe7da, #ffffff);
+  margin-left: 5px;
+  padding: 5px;
+  width: 20%;
+}
+
+.logoImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+}
+.logoImg > img {
+  height: 25px;
+}
+.logoImg > h6 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 0px 15px;
+}
+
+.cardBox {
+  font-family: sans-serif;
+}
+.con-card-box-1 {
+  background: linear-gradient(to bottom, #fe7329, #fc55a1);
+  color: white;
+  border-radius: 5px;
+  gap: 0;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.rating {
+  background: #f57224;
+  font-size: 0.75rem;
+  text-align: left;
+  width: 50%;
+  border-radius: 5px 0px 0px 0px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 0.78rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.benefits {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.conCardicon {
+  width: 20%;
+}
+
+.benefits p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+.benefits img {
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.qrBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrBox > img {
+  width: 50%;
+}
+.storeLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 70%;
+}
+.storeLinks button {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  height: 1.9rem;
+  width: 6.5rem;
+  padding: 2px 4px;
+  border-radius: 7px;
+  background-color: inherit;
+}
+
+.storeLinks > button > img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.storeLinks > button > p {
+  font-size: 0.72rem;
+  font-weight: bold;
+  color: #3a3a3a;
+  line-height: 1.3rem;
+  width: 80%;
+}
+
+.footerText {
+  font-size: 0.75rem;
+  color: #777;
+  font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+  .qrBox > img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    display: none;
+  }
+}

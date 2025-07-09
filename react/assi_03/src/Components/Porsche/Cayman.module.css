@@ -1,0 +1,196 @@
+.wrapper {
+  background-color: #f85606;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.nav1 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: white;
+  padding: 10px 70px 0 70px;
+}
+
+.nav1 > span:hover {
+  color: #ffe1d2;
+  cursor: pointer;
+}
+
+.urdu {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 0.9rem;
+}
+
+.nav2 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 10px 70px 20px 70px;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.center {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.searchInput {
+  padding: 10px;
+  width: 600px;
+  border: none;
+  border-radius: 2px 0 0 2px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.searchBtn {
+  background-color: #ffe1d2;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 2px 2px 0;
+  color: #f85606;
+}
+
+.cartBox {
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.cartIcon {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.cartIcon:hover {
+  cursor: pointer;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 1.6rem;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+@media (max-width: 992px) {
+  .nav2 {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 905px) {
+  .searchInput {
+    width: 500px;
+  }
+
+  .cartBox {
+    margin-left: 1rem;
+  }
+
+  .cartIcon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .searchInput {
+    width: 400px;
+  }
+
+  .cartBox {
+    margin-left: 0.8rem;
+  }
+
+  .nav1 {
+    font-size: 0.75rem;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .searchInput {
+    width: 300px;
+  }
+
+  .cartBox {
+    margin-left: 0.8rem;
+  }
+
+  .nav1 {
+    font-size: 0.65rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .nav1 {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: #f85606;
+    padding: 60px 20px 20px;
+    gap: 12px;
+    font-size: 0.9rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1100;
+  }
+
+  .nav1.showMenu {
+    transform: translateY(0);
+  }
+
+  .nav1:not(.showMenu) {
+    display: none;
+  }
+
+  .nav1 span {
+    color: white;
+    text-align: left;
+  }
+
+  .nav1 span:hover {
+    color: #ffe1d2;
+  }
+
+  .nav2 {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 2.3rem;
+  }
+
+  .searchInput {
+    flex: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .searchInput {
+    width: 200px;
+  }
+}

@@ -1,0 +1,69 @@
+.card {
+    width: 18rem;
+    height: 500px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    background-color: #fff;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+  }
+  
+  .image {
+    height: 220px;
+    object-fit: contain;
+    padding: 10px;
+    background: #fdfdfd;
+  }
+  
+  .cardBody {
+    padding: 10px 16px;
+    height: 120px;
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    height: 38px;
+    overflow: hidden;
+  }
+  
+  .desc {
+    font-size: 0.85rem;
+    color: #666;
+    height: 48px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .listItem {
+    font-size: 0.85rem;
+    color: #444;
+    padding: 8px 16px;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fe7329;
+    padding-left: 16px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fe7329;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
