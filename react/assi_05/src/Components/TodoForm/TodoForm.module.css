@@ -1,0 +1,35 @@
+.todoForm .inputField {
+    border: 1px solid #d7e9f7;
+    border-radius: 8px 0 0 8px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+    background-color: #fcfdff;
+}
+
+.todoForm .inputField:focus {
+    border-color: #b5eaff;
+    box-shadow: 0 0 0 0.25rem rgba(132, 187, 240, 0.25);
+}
+
+.todoForm .addButton {
+    background-color: #92bcea;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.todoForm .addButton:hover {
+    background-color: #7ba6da;
+    transform: translateY(-1px);
+}
+
+.todoForm .addButton:active {
+    background-color: #658ec3;
+    transform: translateY(0);
+}
