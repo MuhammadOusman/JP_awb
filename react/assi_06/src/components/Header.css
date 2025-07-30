@@ -1,0 +1,8 @@
+/* src/components/Header.css */
+.sell-btn {
+  border: 2px solid transparent;
+  font-weight: bold;
+  border-radius: 25px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7) border-box;
+}
