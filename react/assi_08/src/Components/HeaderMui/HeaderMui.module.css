@@ -1,0 +1,19 @@
+.header {
+  background-color: #496786;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+}

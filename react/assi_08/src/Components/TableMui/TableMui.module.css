@@ -1,0 +1,10 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.tableBox {
+  min-width: 100%;
+  box-sizing: border-box;
+}
