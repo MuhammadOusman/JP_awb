@@ -1,0 +1,62 @@
+.baseForm {
+    width: calc(100% - 360px); /* Adjust width to account for sidebar and margin */
+    padding-top: 120px;
+    margin-left: 330px; /* Align with the sidebar */
+    margin-right: 30px; /* Add some right margin */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+@media (max-width: 1000px) {
+    .baseForm {
+        width: calc(100% - 350px);
+        margin-left: 320px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .baseForm {
+        width: calc(100% - 340px);
+        margin-left: 310px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .baseForm {
+        width: calc(100% - 300px);
+        margin-left: 270px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 730px) {
+    .baseForm {
+        width: calc(100% - 290px);
+        margin-left: 260px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .baseForm {
+        width: calc(100% - 250px);
+        margin-left: 220px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .baseForm {
+        margin: 120px 20px;
+        width: calc(100% - 40px) !important; /* Full width minus horizontal margins */
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 0px) {
+    .baseForm {
+        margin: 120px 20px;
+        width: calc(100% - 40px);
+    }
+}

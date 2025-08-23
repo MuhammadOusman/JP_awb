@@ -1,0 +1,123 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-light);
+  padding: 16px;
+  color: var(--text-primary);
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 2000;
+  border-right: 1px solid var(--border-color);
+  border-radius: var(--border-radius-medium);
+  margin: 8px;
+  transition: background-color var(--transition-speed), color var(--transition-speed), border-radius var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold !important;
+  text-shadow: 1px 1px 3px rgba(0, 255, 153, 0.3) !important; /* Neon green shadow */
+  cursor: pointer;
+  font-size: 30px !important;
+  font-family: var(--font-family-primary) !important;
+  letter-spacing: 2px !important;
+  color: var(--neon-green) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  color: var(--neon-green-dark) !important;
+}
+
+.listItem {
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
+  margin-bottom: 8px;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.listItem:hover {
+  background-color: rgba(0, 255, 153, 0.1); /* Subtle neon green hover */
+  transform: translateX(5px);
+}
+
+.appbar {
+  background-color: var(--background-dark) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3) !important;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--border-radius-medium);
+  margin-top: 8px;
+  margin-right: 8px;
+  transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed), border-radius var(--transition-speed);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconBtn {
+  color: var(--neon-green) !important;
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.iconBtn:hover {
+  transform: scale(1.1);
+  color: var(--neon-green-dark) !important;
+}
+
+/* Material-UI overrides for menu items */
+.MuiMenuItem-root {
+  background-color: var(--background-light) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--border-radius-small) !important;
+  margin: 4px 0 !important;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.MuiMenuItem-root:hover {
+  background-color: var(--neon-green) !important;
+  color: var(--background-dark) !important;
+}
+
+.MuiPaper-root.MuiMenu-paper {
+  background-color: var(--background-light) !important;
+  border-radius: var(--border-radius-medium) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.MuiListItemText-primary {
+  font-family: var(--font-family-primary) !important;
+  font-weight: 500 !important;
+}
+
+.MuiTypography-root {
+  font-family: var(--font-family-primary) !important;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 250px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 200px;
+    padding: 2px;
+  }
+
+  .logo {
+    margin: 1rem !important;
+  }
+}

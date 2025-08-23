@@ -1,0 +1,19 @@
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background-dark);
+  transition: background var(--transition-speed);
+}
+
+.mainContentArea {
+  flex: 1;
+  background: var(--background-light);
+  border-radius: var(--border-radius-medium);
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  transition: margin-left var(--transition-speed), background var(--transition-speed), border-radius var(--transition-speed), box-shadow var(--transition-speed);
+  min-height: calc(100vh - 32px);
+  margin-top: 16px;
+  margin-right: 16px;
+  color: var(--text-primary);
+}
