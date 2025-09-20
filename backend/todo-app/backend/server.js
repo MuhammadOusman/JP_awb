@@ -34,10 +34,11 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use('/api/todos', require('./routes/todos'));
 
-app.listen(PORT, () => {
-
-  console.log(`Server running on port ${PORT}`);
-
-});
+// Only start server when run directly (keeps module side-effect free for serverless)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 module.exports = app;
