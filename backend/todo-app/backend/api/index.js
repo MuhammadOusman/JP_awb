@@ -7,7 +7,7 @@ const connectToMongo = serverModule.connectToMongo || (async () => {});
 
 const serverlessHandler = serverless(app);
 
-module.exports.handler = async (req, res) => {
+module.exports = async (req, res) => {
 	try {
 		// ensure DB connection is attempted before handling request (helps cold starts)
 		await connectToMongo();
