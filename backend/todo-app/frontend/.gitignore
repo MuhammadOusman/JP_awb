@@ -1,6 +1,22 @@
-node_modules
-dist
+node_modules/
+dist/
+
+# Environment files
 .env
+.env.*
+
+# Vercel
+.vercel/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+.vercel
