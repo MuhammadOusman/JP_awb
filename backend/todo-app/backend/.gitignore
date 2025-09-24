@@ -1,5 +1,26 @@
-node_modules
+# Node modules
+node_modules/
+
+# Environment files (do not commit secrets)
 .env
+.env.*
+
+# Vercel / deployment files
+.vercel/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# OS files
+.DS_Store
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Optional: local build artifacts
+dist/
+build/
+.vercel
