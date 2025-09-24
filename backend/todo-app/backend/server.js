@@ -1,67 +1,129 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const TodoModel = require('./models/Todo');
+
 require('dotenv').config();
 
-const express = require('express');
-
-const mongoose = require('mongoose');
-
-const cors = require('cors');
-
 const app = express();
-
-const PORT = process.env.PORT || 5000;
-
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// --- Safe MongoDB connection for serverless ---
-// Cache the connection promise on the global object so repeated imports reuse it (prevents multiple connections)
-async function connectToMongo() {
-  if (mongoose.connection.readyState === 1) {
-    // Already connected
-    return;
+// Ensure CORS headers and preflight responses for serverless environments
+// Allow requests from any origin during development; in production tighten this to your frontend domain.
+app.use((req, res, next) => {
+  // Allow all origins (change to specific origin in production)
+  res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
   }
-
-  const uri = process.env.MONGO_URI;
-  if (!uri) {
-    console.error('MONGO_URI is not set. Set the MONGO_URI environment variable in Vercel or .env for local dev.');
-    return; // don't throw so function won't crash — requests will still fail gracefully
-  }
-
-  // Reuse cached promise if available
-  if (!global._mongoConnectPromise) {
-    global._mongoConnectPromise = mongoose.connect(uri)
-      .then(() => console.log('MongoDB connected'))
-      .catch(err => {
-        console.error('MongoDB connection error:', err && (err.stack || err.message || err));
-        // keep promise resolved to avoid retry storms but not throw
-        return Promise.resolve();
-      });
-  }
-
-  await global._mongoConnectPromise;
-}
-
-// Attempt a non-blocking connect (safe for serverless cold start). We call it here so logs show connection attempts.
-connectToMongo();
-
-// Routes
-app.use('/api/todos', require('./routes/todos'));
-
-// Global error handler — returns JSON errors instead of letting the serverless function crash
-app.use((err, req, res, next) => {
-  console.error('Unhandled error in request:', err && (err.stack || err.message || err));
-  res.status(err && err.status ? err.status : 500).json({ message: 'Internal Server Error', error: err && (err.message || String(err)) });
+  next();
 });
 
-// Only start server when run directly (keeps module side-effect free for serverless)
-if (require.main === module) {
-  // For local dev ensure we connect before listening so logs show the connection status
-  connectToMongo().finally(() => {
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-  });
+// Use environment variables so hosts (Vercel, Fly, Railway, etc.) can set the connection string
+const MONGO_URI = process.env.MONGO_URI || '';
+const PORT = process.env.PORT || 5000;
+
+if (!MONGO_URI) {
+  console.warn('Warning: MONGO_URI is not set. The app will not connect to a database until you set MONGO_URI.');
 }
 
-module.exports = { app, connectToMongo };
+// Serverless-friendly MongoDB connection with caching and middleware that waits for connection.
+// This prevents repeated connect attempts on every cold start/invocation and avoids buffering timeouts.
+let mongoConnectPromise = null;
+const mongooseOpts = {
+  // keep reasonable timeouts for serverless environments
+  serverSelectionTimeoutMS: 10000, // 10s
+  socketTimeoutMS: 45000,
+};
+
+async function connectToMongo() {
+  if (!MONGO_URI) throw new Error('MONGO_URI not set');
+  if (mongoose.connection.readyState === 1) return; // already connected
+  if (!mongoConnectPromise) {
+    mongoConnectPromise = mongoose
+      .connect(MONGO_URI, mongooseOpts)
+      .then(() => {
+        console.log('MongoDB connected');
+      })
+      .catch((err) => {
+        // clear promise so retries can occur on next invocation
+        mongoConnectPromise = null;
+        console.error('MongoDB connection error:', err && err.message ? err.message : err);
+        throw err;
+      });
+  }
+  return mongoConnectPromise;
+}
+
+// Ensure each request waits for DB connection (first request will trigger connect). This avoids
+// Mongoose buffering operations and the 'buffering timed out' error when the connection isn't ready.
+app.use(async (req, res, next) => {
+  if (!MONGO_URI) return next();
+  try {
+    if (mongoose.connection.readyState !== 1) {
+      await connectToMongo();
+    }
+    return next();
+  } catch (err) {
+    console.error('Database connection failed while handling request:', err && err.message ? err.message : err);
+    return res.status(500).json({ error: 'Database connection failed' });
+  }
+});
+
+// Routes
+app.post('/todos', (req, res) => {
+  const { text } = req.body;
+  TodoModel.create({ text })
+    .then((result) => res.json(result))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to create todo' });
+    });
+});
+
+app.get('/todos', (req, res) => {
+  TodoModel.find()
+    .then((result) => res.json(result))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to fetch todos' });
+    });
+});
+
+app.put('/todos/:id', (req, res) => {
+  const { id } = req.params;
+  const updateData = {};
+  if (req.body.completed !== undefined) {
+    updateData.completed = req.body.completed;
+  }
+  if (req.body.text !== undefined) {
+    updateData.text = req.body.text;
+  }
+  TodoModel.findByIdAndUpdate(id, updateData, { new: true })
+    .then((result) => res.json(result))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to update todo' });
+    });
+});
+
+app.delete('/todos/:id', (req, res) => {
+  const { id } = req.params;
+  TodoModel.findByIdAndDelete({ _id: id })
+    .then((result) => res.json(result))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to delete todo' });
+    });
+});
+
+// Only listen when this file is run directly. This allows the app to be imported by serverless adapters / tests.
+if (require.main === module) {
+  app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+}
+
+module.exports = app;
